@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -44,11 +45,11 @@ const Home = () => {
           <br /> Patients Healths
         </h2>
         <p className="lorem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus <br />
           numquam veniam porro eius, fugiat vero ut ipsum libero
         </p>
         <div className="home-btn">
-          <a href="">Read More</a>
+          <Link href="" to="/Readmore1">Read More</Link>
           <a className="homebtnsec" href="">
             Appointment
           </a>
@@ -57,6 +58,17 @@ const Home = () => {
       <div className="home-right-content">
         <img src="images/hero2.png" alt="" />
       </div>
+      <div className="header__form">
+  <form>
+    <h4>Book Now</h4>
+    <input type="text" placeholder="First Name" />
+    <input type="text" placeholder="Last Name" />
+    <input type="text" placeholder="Address" />
+    <input type="text" placeholder="Phone No." />
+    <button className="btn form__btn2">Book Appointment</button>
+  </form>
+</div>
+
     </div>
   </div>
   <div className="technology">
@@ -95,7 +107,7 @@ const Home = () => {
   </div>
   {/* home section ends */}
   {/* About us section started */}
-  <div className="main-about">
+  {/* <div className="main-about">
     <div className="about-heading">About Us</div>
     <div className="inner-main-about">
       <div className="about-inner-content-left">
@@ -122,7 +134,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
   {/* About us section ends */}
   {/* our doctors */}
   <div className="main-doctors">
@@ -210,6 +222,49 @@ const Home = () => {
       </div>
     </div>
   </div>
+{/* new One */}
+
+{/* <section class="section__container service__container">
+      <div class="service__header">
+        <div class="service__header__content">
+          <h2 class="section__header">Our Special service</h2>
+          <p>
+            Beyond simply providing medical care, our commitment lies in
+            delivering unparalleled service tailored to your unique needs.
+          </p>
+        </div>
+        <button class="service__btn">Ask A Service</button>
+      </div>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-microscope-line"></i></span>
+          <h4>Laboratory Test</h4>
+          <p>
+            Accurate Diagnostics, Swift Results: Experience top-notch Laboratory
+            Testing at our facility.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-mental-health-line"></i></span>
+          <h4>Health Check</h4>
+          <p>
+            Our thorough assessments and expert evaluations help you stay
+            proactive about your health.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-hospital-line"></i></span>
+          <h4>General Dentistry</h4>
+          <p>
+            Experience comprehensive oral care with Dentistry. Trust us to keep
+            your smile healthy and bright.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </section> */}
   {/* our doctors ended */}
   {/* our services */}
   <div className="our-service">
@@ -346,7 +401,7 @@ const Home = () => {
           </div>
           <div className="review-box">
             <img src="images/pic3.jpg" alt="" />
-            <h2>Irshad Ansar</h2>
+            <h2>Irshad Ansari</h2>
             <div className="review-stars">
               <i className="fa-solid fa-star" />
               <i className="fa-solid fa-star" />
