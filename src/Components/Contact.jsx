@@ -1,6 +1,6 @@
 import React from 'react'
 import {useFormik} from 'formik'
-import {enqueueSnackbar} from 'notistack'
+// import {enqueueSnackbar} from 'notistack'
 // import * as yup from 'yup'
 
 const Contact = () => {
@@ -25,11 +25,11 @@ const Contact = () => {
       console.log(res.status)
       action.resetForm()
 
-      if (res.status === 200){
-        enqueueSnackbar('Thankyou For Contacting Us', {variant: 'success'})
-      } else {
-        enqueueSnackbar('Something went wrong', {variant: 'error'})
-      }
+      // if (res.status === 200){
+      //   enqueueSnackbar('Thankyou For Contacting Us', {variant: 'success'})
+      // } else {
+      //   enqueueSnackbar('Something went wrong', {variant: 'error'})
+      // }
     } 
 
 
