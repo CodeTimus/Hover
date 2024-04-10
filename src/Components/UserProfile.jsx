@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 
-const ManageUser = () => {
+const UserProfile = () => {
     const [Data, setData] = useState([])
 
     const fetchUserData = async () => {
@@ -63,4 +63,4 @@ const ManageUser = () => {
   )
 }
 
-export default ManageUser
+export default UserProfile
