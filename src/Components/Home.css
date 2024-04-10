@@ -196,8 +196,8 @@ header {
 
 .home .home-right-content {
     /* flex: 1 1 50rem; */
-    height: 900px;
-    width: 650px;
+    height: 500px;
+    width: 579px;
     position: absolute;
     top: 40%;
     left: 30%;
@@ -242,7 +242,7 @@ header {
   }
   
   .form__btn2 {
-    background-color: wheat;
+    background-color: rgb(77, 99, 65);
     font-size: 12px;
     transition: 0.3s;
   }
