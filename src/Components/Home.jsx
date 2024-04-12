@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Home.css'
+// import './Home.css'
 
 const Home = () => {
   return (
@@ -60,14 +60,14 @@ const Home = () => {
         <img src="images/hero2.png" alt="" />
       </div>
       <div className="header__form">
-  <form>
+  {/* <form>
     <h4>Book Now</h4>
     <input type="text" placeholder="First Name" />
     <input type="text" placeholder="Last Name" />
     <input type="text" placeholder="Address" />
     <input type="text" placeholder="Phone No." />
     <button className="btn form__btn2">Book Appointment</button>
-  </form>
+  </form> */}
 </div>
 
     </div>

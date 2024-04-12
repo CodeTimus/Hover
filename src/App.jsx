@@ -7,12 +7,12 @@ import './App.css'
 import Signup from './Components/Signup'
 import Home from './Components/Home'
 import Contact from './Components/Contact.jsx'
-import Feedback from './Components/Feedback.jsx'
 import Readmore1 from './Components/Readmore1.jsx'
 import View from './Components/View.jsx'
 import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
-// import LoginPAge from './Components/LoginPAge'
+import './App.css'
+import DoctorProfile from './Components/DoctorProfile.jsx'
 
 const App = () => {
   return (
@@ -31,6 +31,8 @@ const App = () => {
             <Route path="/View" element={<View/>}/>
             <Route path="/*" element={<Notfound/>}/>
             <Route path="/ManageUser" element={<ManageUser/>}/>
+            <Route path="/DoctorProfile" element={<DoctorProfile/>}/>
+
 
 
             </Routes>
