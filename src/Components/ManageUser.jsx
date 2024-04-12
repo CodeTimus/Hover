@@ -39,14 +39,10 @@ const ManageUser = () => {
     }
   return (
     <div>
-        <header className='bg-danger text-white'>
-            <div className="container py-5">
-                <h1>Manage User</h1>
-            </div>
-        </header>
+       <h1 className="bg-danger text-white py-5 text-center">Manage User</h1>
 
-        <div className="container mt-5">
-            <table className="table table-dark">
+        
+            <table className="table table-dark w-75">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -59,7 +55,7 @@ const ManageUser = () => {
                 </tbody>
             </table>
         </div>
-    </div>
+    
   )
 }
 
