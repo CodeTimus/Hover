@@ -12,8 +12,6 @@ import Readmore1 from './Components/Readmore1.jsx'
 import View from './Components/View.jsx'
 import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
-import DoctorProfile from './Components/DoctorProfile.jsx'
-import UserProfile from './Components/UserProfile.jsx'
 // import LoginPAge from './Components/LoginPAge'
 
 const App = () => {
@@ -33,8 +31,6 @@ const App = () => {
             <Route path="/View" element={<View/>}/>
             <Route path="/*" element={<Notfound/>}/>
             <Route path="/ManageUser" element={<ManageUser/>}/>
-            <Route path="/DoctorProfile" element={<DoctorProfile/>}/>
-            <Route path="/UserProfile" element={<UserProfile/>}/>
 
 
             </Routes>
