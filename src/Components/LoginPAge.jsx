@@ -155,7 +155,7 @@ function LoginPage() {
               ex ratione. Aliquid!
             </p>
             <button className="btn transparent" onClick={handleSignUpClick}>
-              Sign up
+              Sign In
               </button>
           </div>
           <img src="image01.png" class="image" alt="" />

@@ -14,7 +14,7 @@ import './App.css'
 import DoctorProfile from './Components/DoctorProfile.jsx'
 import LoginPage from './Components/LoginPAge.jsx'
 import { SnackbarProvider } from 'notistack'
-import LoginPage from './Components/LoginPAge.jsx'
+// import LoginPage from './Components/LoginPAge.jsx'
 
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/About" element={<About />} />
             <Route path="/LoginPage" element={<LoginPage />} />
-            
+
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
