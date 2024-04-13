@@ -12,7 +12,7 @@ import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
 import './App.css'
 import DoctorProfile from './Components/DoctorProfile.jsx'
-import LoginPage from './Components/LoginPage.jsx'
+import LoginPage from './Components/LoginPAge.jsx'
 import { SnackbarProvider } from 'notistack'
 
 
