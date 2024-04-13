@@ -85,7 +85,7 @@ function LoginPage() {
       <div className="forms-container">
         <div className="signin-signup">
           <form action="#" className="sign-in-form loginForm" onSubmit={SignupForm.handleSubmit} >
-            <h2 className="title">Sign in</h2>
+            <h2 className="title">Sign up</h2>
 
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className='my-auto mx-auto'/>
@@ -105,7 +105,7 @@ function LoginPage() {
               onChange={SignupForm.handleChange}
               value={SignupForm.values.password} />
             </div>
-            <button className='btn fs-4'>Sign In</button>
+            <button className='btn fs-4'>Sign up</button>
            
             <p className="social-text loginp"> Sign in with social platforms</p>
             <div className="social-media">
@@ -119,7 +119,7 @@ function LoginPage() {
             </div>
           </form>
           <form action="#" className="sign-up-form loginForm" onSubmit={LoginForm.handleSubmit}>
-            <h2 className="title">Sign up</h2>
+            <h2 className="title">Sign In</h2>
             <div className="input-field">
               <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto'/>
               <input className='LoginInput' type="email" placeholder="Email" name='email'
@@ -132,7 +132,7 @@ function LoginPage() {
               onChange={LoginForm.handleChange}
               value={LoginForm.values.password} />
             </div>
-            <button className='btn fs-4'>Sign Up</button>
+            <button className='btn fs-4'>Sign In</button>
             <p className="social-text loginp">Or Sign up with social platforms</p>
             <div className="social-media">
              
