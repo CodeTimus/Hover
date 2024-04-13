@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import About from './Components/About'
 import './App.css'
 import Signup from './Components/Signup'
@@ -12,36 +12,36 @@ import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
 import './App.css'
 import DoctorProfile from './Components/DoctorProfile.jsx'
-import LoginPage from './Components/LoginPage.jsx'
 import { SnackbarProvider } from 'notistack'
+import LoginPage from './Components/LoginPAge.jsx'
 
 
 const App = () => {
   return (
     <div>
       <SnackbarProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
             <Route path="/About" element={<About />} />
             <Route path="/LoginPage" element={<LoginPage />} />
-           
+            
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
-            <Route path="/Contact" element={<Contact/>}/>
+            <Route path="/Contact" element={<Contact />} />
             {/* <Route path="/Feedback" element={<Feedback/>}/> */}
-            <Route path="/Readmore1" element={<Readmore1/>}/>
-            <Route path="/View" element={<View/>}/>
-            <Route path="/*" element={<Notfound/>}/>
-            <Route path="/ManageUser" element={<ManageUser/>}/>
-            <Route path="/DoctorProfile" element={<DoctorProfile/>}/>
+            <Route path="/Readmore1" element={<Readmore1 />} />
+            <Route path="/View" element={<View />} />
+            <Route path="/*" element={<Notfound />} />
+            <Route path="/ManageUser" element={<ManageUser />} />
+            <Route path="/DoctorProfile" element={<DoctorProfile />} />
 
 
 
-            </Routes>
-            </BrowserRouter>
-            </SnackbarProvider>
+          </Routes>
+        </BrowserRouter>
+      </SnackbarProvider>
     </div>
   )
 }
