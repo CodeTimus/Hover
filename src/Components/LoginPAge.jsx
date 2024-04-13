@@ -5,11 +5,68 @@ import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 // import './LoginPAge.css'
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import { enqueueSnackbar } from 'notistack';
 // import useUserContext from '../Usercontext';
 
 
-function LoginPAge() {
+function LoginPage() {
+
+  // const navigate = useNavigate()
   const [isSignUpMode, setIsSignUpMode] = useState(false);
+
+  const SignupForm = useFormik({
+    initialValues:{
+      name:'',
+      email:'',
+      password:'',
+    },
+
+    onSubmit : async(values , action) => {
+      console.log(values);
+      const res = await fetch ("http://localhost:3000/user/add",{
+        method:'POST',
+        body: JSON.stringify(values),
+        headers:{
+            'Content-Type':'application/json'
+        }
+      });
+      console.log(res.status)
+      action.resetForm()
+      // navigate('/')
+
+      if (res.status === 200){
+        enqueueSnackbar('Signup Successfull', {variant: 'success'})
+      } else {
+        enqueueSnackbar('Something went wrong', {variant: 'error'})
+      }
+    } 
+  });
+
+  const LoginForm = useFormik({
+    initialValues:{
+      email:'',
+      password:'',
+    },
+
+    onSubmit : async(values , action) => {
+      console.log(values);
+      const res = await fetch ("http://localhost:3000/user/authenticate",{
+        method:'POST',
+        body: JSON.stringify(values),
+        headers:{
+            'Content-Type':'application/json'
+        }
+      });
+      console.log(res.status)
+      action.resetForm()
+
+      if (res.status === 200){
+        enqueueSnackbar('Login Successfully', {variant: 'success'})
+      } else {
+        enqueueSnackbar('Something went wrong', {variant: 'error'})
+      }
+    } 
+  })
 
   const handleSignUpClick = () => {
     setIsSignUpMode(true);
@@ -27,20 +84,26 @@ function LoginPAge() {
     <div className={`loginContainer ${isSignUpMode ? 'sign-up-mode' : ''}`}>
       <div className="forms-container">
         <div className="signin-signup">
-          <form action="#" className="sign-in-form loginForm">
+          <form action="#" className="sign-in-form loginForm" onSubmit={SignupForm.handleSubmit} >
             <h2 className="title">Sign in</h2>
 
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="text" placeholder="Username" />
+              <input className='LoginInput' type="text" placeholder="Username" id='name'
+              onChange={SignupForm.handleChange}
+              value={SignupForm.values.name} />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="email" placeholder="Email" />
+              <input className='LoginInput' type="email" placeholder="Email" id='email'
+              onChange={SignupForm.handleChange}
+              value={SignupForm.values.email} />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="password" placeholder="Password" />
+              <input className='LoginInput' type="password" placeholder="Password" id='password'
+              onChange={SignupForm.handleChange}
+              value={SignupForm.values.password} />
             </div>
             <button className='btn fs-4'>Sign In</button>
            
@@ -55,19 +118,19 @@ function LoginPAge() {
               </a>
             </div>
           </form>
-          <form action="#" className="sign-up-form loginForm">
+          <form action="#" className="sign-up-form loginForm" onSubmit={LoginForm.handleSubmit}>
             <h2 className="title">Sign up</h2>
             <div className="input-field">
-              <FontAwesomeIcon icon={faUser} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="text" placeholder="Username" />
-            </div>
-            <div className="input-field">
               <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="email" placeholder="Email" />
+              <input className='LoginInput' type="email" placeholder="Email" name='email'
+              onChange={LoginForm.handleChange}
+              value={LoginForm.values.email} />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className='my-auto mx-auto'/>
-              <input className='LoginInput' type="password" placeholder="Password" />
+              <input className='LoginInput' type="password" placeholder="Password" name='password'
+              onChange={LoginForm.handleChange}
+              value={LoginForm.values.password} />
             </div>
             <button className='btn fs-4'>Sign Up</button>
             <p className="social-text loginp">Or Sign up with social platforms</p>
@@ -114,6 +177,6 @@ function LoginPAge() {
     </div>
   )}
 
-  export default LoginPAge
+  export default LoginPage
 
 

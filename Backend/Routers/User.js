@@ -4,7 +4,7 @@ const Model=  require('../Models/User')
 
 router.post('/add',(req,res)=>{
     console.log(req.body)
-    new Model(rew.body),save()
+    new Model(req.body).save()
     .then((result) => {
         res.json(result)
         
