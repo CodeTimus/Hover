@@ -9,7 +9,7 @@ import { enqueueSnackbar } from 'notistack';
 import useUserContext from '../UserContext';
 
 
-function LoginPage() {
+function Login() {
 
   // const navigate = useNavigate()
   const [isSignUpMode, setIsSignUpMode] = useState(false);
@@ -181,6 +181,6 @@ function LoginPage() {
     </div>
   )}
 
-  export default LoginPage
+  export default Login
 
 

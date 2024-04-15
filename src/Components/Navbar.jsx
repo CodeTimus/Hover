@@ -1,7 +1,25 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import useUserContext from '../UserContext'
 
 const Navbar = () => {
+  const{loggedIn,logout} = useUserContext()
+  console.log(loggedIn)
+  const showLoggedIn = () => {
+    if(loggedIn){
+      return (
+        <Link className="nav-link active" aria-current="page" onClick={logout}>
+          Logout
+        </Link>
+      );
+    } else {
+      return (
+        <Link className="nav-link active" aria-current="page" to="/Login">
+          Login
+        </Link>
+      )
+    }
+  }
   return (
 
     <div>
@@ -26,9 +44,7 @@ const Navbar = () => {
         <Link className="nav-link active" aria-current="page" to="/Home">
           Home
         </Link>
-        <Link className="nav-link" to="/LoginPage">
-          Login
-        </Link>
+        {showLoggedIn()}
         <Link className="nav-link" to="/Contact">
           Contact Us
         </Link>

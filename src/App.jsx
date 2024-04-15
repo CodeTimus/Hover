@@ -10,11 +10,14 @@ import Readmore1 from './Components/Readmore1.jsx'
 import View from './Components/View.jsx'
 import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
-import './App.css'
+// import './App.css'
 import DoctorProfile from './Components/DoctorProfile.jsx'
-import LoginPage from './Components/LoginPAge.jsx'
 import { SnackbarProvider } from 'notistack'
-// import LoginPage from './Components/LoginPAge.jsx'
+import { UserProvider } from './UserContext.jsx'
+import Login from './Components/Login.jsx'
+import Feedback from './Components/Feedback.jsx'
+import Location from './Components/Location.jsx'
+import AddDoctor from './Components/AddDoctor.jsx'
 
 
 const App = () => {
@@ -22,10 +25,12 @@ const App = () => {
     <div>
       <SnackbarProvider>
         <BrowserRouter>
+        <UserProvider>
           <Navbar />
           <Routes>
             <Route path="/About" element={<About />} />
-            <Route path="/LoginPage" element={<LoginPage />} />
+           
+            <Route path="/Login" element={<Login />} />
 
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
@@ -34,13 +39,17 @@ const App = () => {
             {/* <Route path="/Feedback" element={<Feedback/>}/> */}
             <Route path="/Readmore1" element={<Readmore1 />} />
             <Route path="/View" element={<View />} />
+            <Route path="/Feedback" element={<Feedback />} />
             <Route path="/*" element={<Notfound />} />
             <Route path="/ManageUser" element={<ManageUser />} />
             <Route path="/DoctorProfile" element={<DoctorProfile />} />
+            <Route path="/Location" element={<Location />} />
+            <Route path="/AddDoctor" element={<AddDoctor />} />
 
 
 
           </Routes>
+          </UserProvider>
         </BrowserRouter>
       </SnackbarProvider>
     </div>
