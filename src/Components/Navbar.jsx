@@ -36,6 +36,7 @@ const Navbar = () => {
       aria-controls="navbarNavAltMarkup"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      
     >
       <span className="navbar-toggler-icon" />
     </button>
@@ -51,6 +52,11 @@ const Navbar = () => {
         <Link className="nav-link" to="/Feedback">
           Feedback
         </Link>
+        <Link className="nav-link" to="/DoctorProfile">
+        DoctorProfile
+        </Link>
+        
+        
         {/* <Link
           className="nav-link disabled"
           to="#"
