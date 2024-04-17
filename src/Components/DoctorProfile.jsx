@@ -1,30 +1,16 @@
 import React from 'react'
-import './DoctorProfile.css'
+// import './DoctorProfile.css'
 
 const DoctorProfile = () => {
   return (
-    <div>
+    <div className='profile-body'>
       <div className="container">
-  <div className="main-body">
-    {/* Breadcrumb */}
-    <nav aria-label="breadcrumb" className="main-breadcrumb">
-      <ol className="breadcrumb">
-        <li className="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li className="breadcrumb-item">
-          <a href="javascript:void(0)">User</a>
-        </li>
-        <li className="breadcrumb-item active" aria-current="page">
-          User Profile
-        </li>
-      </ol>
-    </nav>
-    {/* /Breadcrumb */}
+  <div className="main-body1">
+
     <div className="row gutters-sm">
       <div className="col-md-4 mb-3">
-        <div className="card">
-          <div className="card-body">
+        <div className="card-profile">
+          <div className="card-body1">
             <div className="d-flex flex-column align-items-center text-center">
               <img
                 src="https://bootdey.com/img/Content/avatar/avatar7.png"
