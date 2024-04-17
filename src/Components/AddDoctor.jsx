@@ -45,7 +45,7 @@ const AddDoctor = () => {
 
       if (res.status === 200) {
 
-        enqueueSnackbar('Project Added Successfully', {
+        enqueueSnackbar('Doctor Added Successfully', {
           variant: 'success', anchorOrigin: {
             vertical: 'top',
             horizontal: 'right',
