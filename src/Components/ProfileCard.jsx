@@ -19,7 +19,7 @@ const ProfileCard = () => {
             <div className="box88">
               <div className="profile-box88">
                 <div className="profile-img88">
-                  <img src="img/user-1.png" alt="User Image" />
+                  <img src="images/user-3.jpg" alt="User Image" />
                 </div>
                 <div className="profile-docs88">
                   <h1>Sandra D. Johnson</h1>
@@ -52,7 +52,7 @@ const ProfileCard = () => {
             <div className="box88">
               <div className="profile-box88">
                 <div className="profile-img88">
-                  <img src="img/user-1.png" alt="User Image" />
+                  <img src="images/user-4.jpg" alt="User Image" />
                 </div>
                 <div className="profile-docs88">
                   <h1>Sandra D. Johnson</h1>
@@ -85,7 +85,7 @@ const ProfileCard = () => {
           <div className="box88">
     <div className="profile-box88">
       <div className="profile-img88">
-        <img src="img/user-1.png" alt="User Image" />
+        <img src="images/user-1.png" alt="User Image" />
       </div>
       <div className="profile-docs88">
         <h1>Sandra D. Johnson</h1>
@@ -118,7 +118,7 @@ const ProfileCard = () => {
           <div className="box88">
     <div className="profile-box88">
       <div className="profile-img88">
-        <img src="img/user-1.png" alt="User Image" />
+        <img src="images/user-1.png" alt="User Image" />
       </div>
       <div className="profile-docs88">
         <h1>Sandra D. Johnson</h1>
