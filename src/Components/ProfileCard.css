@@ -1,0 +1,100 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .box88 {
+    padding: 10px;
+    text-align: center;
+  }
+  .profile-box88 {
+    width: 20pc;
+    height: 35pc;
+    border-radius: 20px 20px 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fcfcfc;
+    transition: 0.4s;
+  }
+  .profile-box88:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 5px #616161;
+  }
+  .profile-img88 {
+    background-color: rgb(0, 54, 155);
+    border-radius: 0 20px 0 20px;
+    height: 9pc;
+    width: auto;
+    padding-top: 2pc;
+    transition: 0.4s;
+  }
+  .profile-img88 img {
+    border-radius: 100%;
+    border: 2px solid #f0f0f0;
+    width: 40%;
+  }
+  .profile-img88:hover {
+    padding-top: 3pc;
+  }
+  .profile-docs88 {
+    padding-top: 3pc;
+  }
+  .profile-docs88 h1 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .profile-docs88 h3 {
+    font-size: 18px;
+    color: rgb(0, 54, 155);
+  }
+  .profile-docs88 p {
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+  }
+  .profile-docs88 button {
+    padding: 13px 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 54, 155);
+    color: rgb(0, 54, 155);
+    transition: 0.4s;
+  }
+  .profile-docs88 button:hover {
+    background-color: rgb(0, 54, 155);
+    color: #f0f0f0;
+  }
+  .profile-icon88 {
+    display: flex;
+    place-content: center;
+    font-size: 22px;
+    padding: 20px;
+  }
+  .profile-icon88 li i {
+    transition: 0.2s;
+    padding: 10px;
+  }
+  .profile-icon88 .fa-github:hover {
+    color: #303030;
+    transform: translateY(-3px);
+  }
+  .profile-icon88 .fa-instagram:hover {
+    color: #c13584;
+    transform: translateY(-3px);
+  }
+  .profile-icon88 .fa-linkedin:hover {
+    color: blue;
+    transform: translateY(-3px);
+  }
+  .profile-icon88 .fa-twitter:hover {
+    color: #00acee;
+    transform: translateY(-3px);
+  }

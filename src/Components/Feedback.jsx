@@ -36,6 +36,7 @@ const Feedback = () => {
                 href="vendor/bootstrap/css/bootstrap.min.css"
             />
             <link rel="stylesheet" href="main.css" />
+            
             <div className="contact1">
                 <div className="container-contact1">
                     <div className="contact1-pic js-tilt" data-tilt="">

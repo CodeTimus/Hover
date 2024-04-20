@@ -18,6 +18,10 @@ import Login from './Components/Login.jsx'
 import Feedback from './Components/Feedback.jsx'
 import Location from './Components/Location.jsx'
 import AddDoctor from './Components/AddDoctor.jsx'
+import DoctorLogin from './Components/DoctorLogin.jsx'
+import ProfileCard from './Components/ProfileCard.jsx'
+
+
 
 
 const App = () => {
@@ -45,6 +49,12 @@ const App = () => {
             <Route path="/DoctorProfile" element={<DoctorProfile />} />
             <Route path="/Location" element={<Location />} />
             <Route path="/AddDoctor" element={<AddDoctor />} />
+            <Route path="/DoctorLogin" element={<DoctorLogin />} />
+            <Route path="/ProfileCard" element={<ProfileCard />} />
+          
+            
+
+
 
 
 
