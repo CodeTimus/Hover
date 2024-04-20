@@ -81,7 +81,7 @@ const ProfileCard = () => {
             </div>
           </div>
 
-          <div className="col-md-3">
+          {/* <div className="col-md-3">
           <div className="box88">
     <div className="profile-box88">
       <div className="profile-img88">
@@ -113,7 +113,7 @@ const ProfileCard = () => {
 
     </div>
   </div>
-          </div>
+          </div> */}
           <div className="col-md-3">
           <div className="box88">
     <div className="profile-box88">
