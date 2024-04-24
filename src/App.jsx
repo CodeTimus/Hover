@@ -11,7 +11,6 @@ import View from './Components/View.jsx'
 import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
 // import './App.css'
-import DoctorProfile from './Components/DoctorProfile.jsx'
 import { SnackbarProvider } from 'notistack'
 import { UserProvider } from './UserContext.jsx'
 import Login from './Components/Login.jsx'
@@ -20,6 +19,7 @@ import Location from './Components/Location.jsx'
 import AddDoctor from './Components/AddDoctor.jsx'
 import DoctorLogin from './Components/DoctorLogin.jsx'
 import ProfileCard from './Components/ProfileCard.jsx'
+import DoctorProfile from './Components/DoctorProfile.jsx'
 
 
 
@@ -46,18 +46,12 @@ const App = () => {
             <Route path="/Feedback" element={<Feedback />} />
             <Route path="/*" element={<Notfound />} />
             <Route path="/ManageUser" element={<ManageUser />} />
-            <Route path="/DoctorProfile" element={<DoctorProfile />} />
+            <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
             <Route path="/Location" element={<Location />} />
             <Route path="/AddDoctor" element={<AddDoctor />} />
             <Route path="/DoctorLogin" element={<DoctorLogin />} />
             <Route path="/ProfileCard" element={<ProfileCard />} />
           
-            
-
-
-
-
-
           </Routes>
           </UserProvider>
         </BrowserRouter>

@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
+import {  useParams } from 'react-router-dom'
 
 const DoctorProfile = () => {
+  const { id } = useParams();
   const [doctorList, setDoctorList] = useState([]);
   const fetchUserData = async () => {
-    const res = await fetch('http://localhost:5000/doctor/getbyid/' + id);
+    const res = await fetch('http://localhost:3000/doctor/getbyid/' + id);
     console.log(res.status);
     if (res.status === 200) {
       const data = await res.json();
