@@ -25,7 +25,7 @@ const Navbar = () => {
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <Link className="navbar-brand text-success" to="/Admin/base">
+    <Link className="navbar-brand text-success" to="/admin/base">
       EMS
     </Link>
     <button

@@ -19,16 +19,11 @@ import Location from './Components/Location.jsx'
 import AddDoctor from './Components/AddDoctor.jsx'
 import DoctorLogin from './Components/DoctorLogin.jsx'
 import ProfileCard from './Components/ProfileCard.jsx'
-<<<<<<< HEAD
-import DoctorProfile from './Components/DoctorProfile.jsx'
-=======
 import Base from './Components/Admin/Base.jsx'
 import Header from './Components/Admin/Header.jsx'
-import Sidebar from './Components/Admin/Sidebar.jsx'
+import Sidebar from './Components/Admin/Sidebar.jsx'  
 import Main from './Components/Admin/Index.jsx'
->>>>>>> 7d551657a94349f1b6258c28526c03392cbfdd6a
-
-
+import DoctorProfile from './Components/DoctorProfile.jsx'
 
 
 const App = () => {
@@ -42,7 +37,6 @@ const App = () => {
             <Route path="/About" element={<About />} />
            
             <Route path="/Login" element={<Login />} />
-
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />

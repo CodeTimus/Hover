@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 import "./ProfileCard.css";
 const ProfileCard = () => {
 
@@ -42,7 +43,7 @@ const ProfileCard = () => {
           <div className="box88">
             <div className="profile-box88">
               <div className="profile-img88">
-                <img src="images/user-3.jpg" alt="User Image" />
+                <img src={"http://localhost:3000/" + doc.image} />
               </div>
               <div className="profile-docs88">
                 <h1>{doc.name}</h1>
@@ -51,7 +52,7 @@ const ProfileCard = () => {
                   A front-end developer is a software developer. Who works on
                   the client-side, of a web application.
                 </p>
-                <button>View More</button>
+                <Link to={'/DoctorProfile/' + doc._id} className="btn btn-outline-primary m-2">Know More</Link>
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ const ProfileCard = () => {
   }
 
   return (
-    <div>
+    <div className="">
        <header className='bg-body-tertiory'>
                 <div className='container py-5'>
 
