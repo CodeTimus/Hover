@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {  useParams } from 'react-router-dom'
+import certificate from '../assets/heartCertificate.jpg'
 
 const DoctorProfile = () => {
   const { id } = useParams();
@@ -20,8 +21,8 @@ const DoctorProfile = () => {
     
 
   return (
-    <div className='profile-body m-0'>
-      <div className="container">
+    <div className='profile-body'>
+      <div className="container ">
         <div className="main-body1 w-100">
 
           <div className="row gutters-sm">
@@ -36,8 +37,8 @@ const DoctorProfile = () => {
                       width={150}
                     />
                     <div className="mt-3">
-                      <h4>{doctorList.name}</h4>
-                      <p className="text-secondary mb-1">{doctorList.speciality}</p>
+                      <h4 className='fs-1'>{doctorList.name}</h4>
+                      <p className="text-secondary mb-1 fs-2">{doctorList.speciality}</p>
                       
                       <button className="btn btn-primary">Book</button>
 
@@ -45,9 +46,9 @@ const DoctorProfile = () => {
                   </div>
                 </div>
               </div>
-              <div className="card mt-3">
-                <h1>Hello</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, facere!</p>
+              <div className="card mt-3 p-5">
+                <h1 className='fs-2 text-center'>Introduction</h1>
+                <p className='fs-3 mt-3 text-center'>{doctorList.desc}</p>
               </div>
             </div>
             <div className="col-md-8">
@@ -55,36 +56,26 @@ const DoctorProfile = () => {
                 <div className="card-body">
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Full Name</h6>
+                      <h6 className="mb-0 fs-3">Full Name</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">{doctorList.name}</div>
+                    <div className="col-sm-9 text-secondary fs-3">{doctorList.name}</div>
                   </div>
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Email</h6>
+                      <h6 className="mb-0 fs-3">Email</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">{doctorList.email}</div>
+                    <div className="col-sm-9 text-secondary fs-3">{doctorList.email}</div>
                   </div>
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <h6 className="mb-0">Phone</h6>
+                      <h6 className="mb-0 fs-3">Phone</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">{doctorList.contact}</div>
+                    <div className="col-sm-9 text-secondary fs-3">{doctorList.contact}</div>
                   </div>
                   <hr />
-                  
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Address</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      {doctorList.Address}
-                    </div>
-                  </div>
-                  <hr />
+                 
                   <div className="row">
 
                   </div>
@@ -93,71 +84,13 @@ const DoctorProfile = () => {
               <div className="row gutters-sm">
                 <div className="col-sm-6 mb-3">
                   <div className="card h-100">
-
+                    <img src={'http://localhost:3000/' + doctorList.cer1} />
                   </div>
                 </div>
                 <div className="col-sm-6 mb-3">
                   <div className="card h-100">
                     <div className="card-body">
-                      <h6 className="d-flex align-items-center mb-3">
-                        <i className="material-icons text-info mr-2">assignment</i>
-                        Project Status
-                      </h6>
-                      <small>Web Design</small>
-                      <div className="progress mb-3" style={{ height: 5 }}>
-                        <div
-                          className="progress-bar bg-primary"
-                          role="progressbar"
-                          style={{ width: "80%" }}
-                          aria-valuenow={80}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        />
-                      </div>
-                      <small>Website Markup</small>
-                      <div className="progress mb-3" style={{ height: 5 }}>
-                        <div
-                          className="progress-bar bg-primary"
-                          role="progressbar"
-                          style={{ width: "72%" }}
-                          aria-valuenow={72}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        />
-                      </div>
-                      <small>One Page</small>
-                      <div className="progress mb-3" style={{ height: 5 }}>
-                        <div
-                          className="progress-bar bg-primary"
-                          role="progressbar"
-                          style={{ width: "89%" }}
-                          aria-valuenow={89}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        />
-                      </div>
-                      <small>Mobile Template</small>
-                      <div className="progress mb-3" style={{ height: 5 }}>
-                        <div
-                          className="progress-bar bg-primary"
-                          role="progressbar"
-                          style={{ width: "55%" }}
-                          aria-valuenow={55}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        />
-                      </div>
-                      <small>Backend API</small>
-                      <div className="progress mb-3" style={{ height: 5 }}>
-                        <div
-                          className="progress-bar bg-primary"
-                          role="progressbar"
-                          style={{ width: "66%" }}
-                          aria-valuenow={66}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        />
-                      </div>
+                      <img src={'http://localhost:3000/' + doctorList.cer2} />
                     </div>
                   </div>
                 </div>

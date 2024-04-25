@@ -24,6 +24,9 @@ const AddDoctor = () => {
       longitude: '',
       speciality: '',
       image: '',
+      cer1:'',
+      cer2:'',
+      desc:'',
       avatar:'',
       createdAt: new Date(),
     },
@@ -85,7 +88,7 @@ const AddDoctor = () => {
 
   return (
 
-    <div className="container-fluid bg-img-addproduct d-flex ">
+    <div className="container-fluid bg-img-addproduct d-flex mt-5">
       <div className="card   d-block m-auto bg-transparent  shadow " style={{ width: "450px", border: "none" }}>
         <div className="card-header">
           <h1 className="text-center fw-bold" style={{ fontFamily: "serif" }}>Add Project</h1>
@@ -161,10 +164,41 @@ const AddDoctor = () => {
               />
 
             </div>
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="text"
+                className="form-control shadow input mb-4"
+                id="desc" placeholder="Introduction"
+                onChange={addProjectForm.handleChange}
+                value={addProjectForm.values.desc}
+              />
+
+            </div>
 
             <div className="form-outline">
               <label className="form-label" htmlFor="form3Example1m1">
                 Upload Image
+              </label>
+              <input
+                type="file" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input"
+                onChange={uploadFile}
+              />
+            </div>
+            <div className="form-outline">
+              <label className="form-label" htmlFor="form3Example1m1">
+                Upload Certificate 1
+              </label>
+              <input
+                type="file" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input"
+                onChange={uploadFile}
+              />
+            </div>
+            <div className="form-outline">
+              <label className="form-label" htmlFor="form3Example1m1">
+                Upload Certificate 2
               </label>
               <input
                 type="file" style={{ fontFamily: "cursive" }}

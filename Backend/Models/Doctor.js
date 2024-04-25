@@ -8,6 +8,9 @@ const myschema = new Schema({
     longitude: {type:String},
     speciality: {type:String, required: true},
     image: {type:String},
+    cer1: {type: String},
+    cer2: {type:String},
+    desc: {type: String},
     avatar: {type:String, default: "avatar_placeholder.png"},
     createdAt: Date,
     notiToken: {type:String, default: ''}

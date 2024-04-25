@@ -21,12 +21,15 @@ import DoctorLogin from './Components/DoctorLogin.jsx'
 import ProfileCard from './Components/ProfileCard.jsx'
 import Base from './Components/Admin/Base.jsx'
 import Header from './Components/Admin/Header.jsx'
-import Sidebar from './Components/Admin/Sidebar.jsx'
+import Sidebar from './Components/Admin/Sidebar.jsx'  
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
+<<<<<<< HEAD
 import FileUpload from './Components/FileUpload.jsx'
 
 
+=======
+>>>>>>> c57f61fce233efbd93f6ad770186eb3bb6126a42
 
 
 const App = () => {
@@ -40,7 +43,6 @@ const App = () => {
             <Route path="/About" element={<About />} />
            
             <Route path="/Login" element={<Login />} />
-
             <Route path="/Signup" element={<Signup />} />
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
