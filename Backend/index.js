@@ -11,6 +11,7 @@ const UserRouter=require('./Routers/User')
 const ContactRouter=require('./Routers/Contact')
 const FeedbackRouter=require('./Routers/Feedback')
 const DoctorsRouter = require('./Routers/Doctor');
+const UtilsRouter = require("./Routers/Utils")
 
 // Middleware
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use('/user',UserRouter)
 app.use('/contact',ContactRouter)
 app.use('/Feedback',FeedbackRouter)
 app.use('/doctor', DoctorsRouter);
+app.use("/Utils" , UtilsRouter);
 
 app.listen(port,() =>{
     console.log('Server is Running at the port 3000')

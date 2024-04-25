@@ -19,14 +19,12 @@ import Location from './Components/Location.jsx'
 import AddDoctor from './Components/AddDoctor.jsx'
 import DoctorLogin from './Components/DoctorLogin.jsx'
 import ProfileCard from './Components/ProfileCard.jsx'
-<<<<<<< HEAD
-import DoctorProfile from './Components/DoctorProfile.jsx'
-=======
 import Base from './Components/Admin/Base.jsx'
 import Header from './Components/Admin/Header.jsx'
 import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
->>>>>>> 7d551657a94349f1b6258c28526c03392cbfdd6a
+import DoctorProfile from './Components/DoctorProfile.jsx'
+import FileUpload from './Components/FileUpload.jsx'
 
 
 
@@ -53,7 +51,7 @@ const App = () => {
             <Route path="/Feedback" element={<Feedback />} />
             <Route path="/*" element={<Notfound />} />
             <Route path="/ManageUser" element={<ManageUser />} />
-            <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
+            {/* <Route path="/DoctorProfile/:id" element={<DoctorProfile />} /> */}
             <Route path="/Location" element={<Location />} />
             <Route path="/AddDoctor" element={<AddDoctor />} />
             <Route path="/DoctorLogin" element={<DoctorLogin />} />
@@ -62,6 +60,9 @@ const App = () => {
             <Route path="Base" element={<Base />} />
             <Route path="Header" element={<Header />} />
             <Route path="Sidebar" element={<Sidebar />} />
+            <Route path="DoctorProfile" element={<DoctorProfile />} />
+            <Route path="FileUpload" element={<FileUpload />} />
+
             
 
           
