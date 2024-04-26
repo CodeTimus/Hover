@@ -50,10 +50,10 @@ const Home = () => {
           numquam veniam porro eius, fugiat vero ut ipsum libero
         </p>
         <div className="home-btn">
-          <Link href="" to="/Readmore1">Read More</Link>
-          <a className="homebtnsec" href="">
-            Appointment
-          </a>
+          <Link to="/Location">Explore Map</Link>
+          <Link className="homebtnsec" to="/ProfileCard">
+            Profiles
+          </Link>
         </div>
       </div>
       <div className="home-right-content">

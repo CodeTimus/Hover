@@ -62,7 +62,7 @@ const Location = () => {
 
     return (
         <div>
-            <MapContainer style={{ width: 1200, height: 800 }} center={coords.length > 0 ? coords : [26.8467, 80.9462]} zoom={20} scrollWheelZoom={true}>
+            <MapContainer style={{ width: 1200, height: 800 }} center={coords.length > 0 ? coords : [26.8763, 80.9762]} zoom={20} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -71,8 +71,8 @@ const Location = () => {
                 {
                     coords.length > 0 && doctorList.map((doctor) => {
                         const distance = calculateDistance(coords[0], coords[1], doctor.latitude, doctor.longitude);
-                        console.log(distance);
                         if (distance <= 5) {
+                            console.log(doctor.name, distance);
                             return (
                                 <Marker position={[doctor.latitude, doctor.longitude]}>
                                     <Popup>
