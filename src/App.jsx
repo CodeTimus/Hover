@@ -10,7 +10,6 @@ import Readmore1 from './Components/Readmore1.jsx'
 import View from './Components/View.jsx'
 import Notfound from './Components/Notfound.jsx'
 import ManageUser from './Components/ManageUser.jsx'
-// import './App.css'
 import { SnackbarProvider } from 'notistack'
 import { UserProvider } from './UserContext.jsx'
 import Login from './Components/Login.jsx'
@@ -23,10 +22,14 @@ import Base from './Components/Admin/Base.jsx'
 import Header from './Components/Admin/Header.jsx'
 import Sidebar from './Components/Admin/Sidebar.jsx'  
 import Main from './Components/Admin/Index.jsx'
+<<<<<<< HEAD
 import DoctorProfile from './Components/DoctorProfile.jsx' 
 
 import PushNotificationButton from './Components/PushNotificationButton.jsx'
 
+=======
+import DoctorProfile from './Components/DoctorProfile.jsx'
+>>>>>>> a9c2738305a5196014dd1c4b80cef7ec4354a613
 
 const App = () => {
   return (
@@ -43,13 +46,12 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
-            {/* <Route path="/Feedback" element={<Feedback/>}/> */}
             <Route path="/Readmore1" element={<Readmore1 />} />
             <Route path="/View" element={<View />} />
             <Route path="/Feedback" element={<Feedback />} />
             <Route path="/*" element={<Notfound />} />
             <Route path="/ManageUser" element={<ManageUser />} />
-            {/* <Route path="/DoctorProfile/:id" element={<DoctorProfile />} /> */}
+            <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
             <Route path="/Location" element={<Location />} />
             <Route path="/AddDoctor" element={<AddDoctor />} />
             <Route path="/DoctorLogin" element={<DoctorLogin />} />
@@ -58,11 +60,14 @@ const App = () => {
             <Route path="Base" element={<Base />} />
             <Route path="Header" element={<Header />} />
             <Route path="Sidebar" element={<Sidebar />} />
+<<<<<<< HEAD
             <Route path="DoctorProfile" element={<DoctorProfile />} />
             <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
 
             
 
+=======
+>>>>>>> a9c2738305a5196014dd1c4b80cef7ec4354a613
           
           </Routes>
           </UserProvider>

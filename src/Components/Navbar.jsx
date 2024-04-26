@@ -15,7 +15,7 @@ const Navbar = () => {
     } else {
       return (
         <Link className="nav-link active" aria-current="page" to="/Login">
-          Login
+          Register
         </Link>
       )
     }
@@ -52,8 +52,8 @@ const Navbar = () => {
         <Link className="nav-link" to="/Feedback">
           Feedback
         </Link>
-        <Link className="nav-link" to="/DoctorProfile">
-        DoctorProfile
+        <Link className="nav-link" to="/Readmore1">
+        About
         </Link>
         
         

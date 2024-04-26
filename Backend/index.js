@@ -19,7 +19,7 @@ app.use('/user',UserRouter)
 app.use('/contact',ContactRouter)
 app.use('/Feedback',FeedbackRouter)
 app.use('/doctor', DoctorsRouter);
-app.use("/Utils" , UtilsRouter);
+app.use("/util" , UtilsRouter);
 
 app.listen(port,() =>{
     console.log('Server is Running at the port 3000')
