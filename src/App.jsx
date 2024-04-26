@@ -23,13 +23,9 @@ import Base from './Components/Admin/Base.jsx'
 import Header from './Components/Admin/Header.jsx'
 import Sidebar from './Components/Admin/Sidebar.jsx'  
 import Main from './Components/Admin/Index.jsx'
-import DoctorProfile from './Components/DoctorProfile.jsx'
-<<<<<<< HEAD
-import FileUpload from './Components/FileUpload.jsx'
+import DoctorProfile from './Components/DoctorProfile.jsx' 
 
-
-=======
->>>>>>> c57f61fce233efbd93f6ad770186eb3bb6126a42
+import PushNotificationButton from './Components/PushNotificationButton.jsx'
 
 
 const App = () => {
@@ -63,7 +59,7 @@ const App = () => {
             <Route path="Header" element={<Header />} />
             <Route path="Sidebar" element={<Sidebar />} />
             <Route path="DoctorProfile" element={<DoctorProfile />} />
-            <Route path="FileUpload" element={<FileUpload />} />
+            <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
 
             
 
