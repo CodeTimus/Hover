@@ -1,13 +1,32 @@
 // import { Icon } from 'leaflet';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { useMapEvent, useMapEvents } from 'react-leaflet/hooks'
+
+
+const CaptureEvent = ({calculateDistance, coords}) => {
+    
+
+    useMapEvent('click', (e) => {
+        const { lat, lng } = e.latlng;
+        console.log(lat, lng);
+        const distance = calculateDistance(coords[0], coords[1], lat, lng);
+        console.log(distance);
+    })
+
+    return null
+}
 
 const Location = () => {
 
 
     const [doctorList, setDoctorList] = useState([]);
+    const [coords, setCoords] = useState([])
+    const [selDoc, setSelDoc] = useState(null);
+
+    const mapRef = useRef();
 
     const fetchDoctors = async () => {
         const res = await fetch("http://localhost:3000/doctor/getall");
@@ -23,11 +42,9 @@ const Location = () => {
         fetchDoctors();
     }, []);
 
-    
 
 
-    const [coords, setCoords] = useState([])
-    const [selDoc, setSelDoc] = useState(null);
+
 
     const getCurrentLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -59,42 +76,63 @@ const Location = () => {
         return deg * (Math.PI / 180);
     }
 
+    useEffect(() => {
+        // console.log(mapRef.current);
+        // return;
+        // const map = mapRef.current.leafletElement;
+        // if (!map) return;
+        // map.on('click', (e) => {
+        //     console.log(e);
+        // });
+    }, [mapRef]);
 
     return (
         <div>
-            <MapContainer style={{ width: 1200, height: 800 }} center={coords.length > 0 ? coords : [26.8763, 80.9762]} zoom={20} scrollWheelZoom={true}>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-
-                {
-                    coords.length > 0 && doctorList.map((doctor) => {
-                        const distance = calculateDistance(coords[0], coords[1], doctor.latitude, doctor.longitude);
-                        if (distance <= 5) {
-                            console.log(doctor.name, distance);
-                            return (
-                                <Marker position={[doctor.latitude, doctor.longitude]}>
-                                    <Popup>
-                                        <h2>{doctor.name}</h2>
-                                        <p>{doctor.speciality}</p>
-                                        <button onClick={() => setSelDoc(doctor)}>Select</button>
-                                    </Popup>
-                                </Marker>
-                            )
+            {
+                coords.length > 0 && (
+                    <MapContainer
+                        onClick={e => console.log(e)}
+                        style={{ width: 1200, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
+                        {
+                            <CaptureEvent
+                                calculateDistance={calculateDistance}
+                                coords={coords}
+                            />
                         }
-                        return null;
-                    })
-                }
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
 
-                {
-                    coords.length > 0 && <Marker position={coords}>
-                        <Popup>
-                            You are here
-                        </Popup>
-                    </Marker>
-                }
-            </MapContainer>
+                        {
+                            coords.length > 0 && doctorList.map((doctor) => {
+                                const distance = calculateDistance(coords[0], coords[1], doctor.latitude, doctor.longitude);
+                                if (distance <= 5) {
+                                    console.log(doctor.name, distance);
+                                    return (
+                                        <Marker key={doctor._id} position={[doctor.latitude, doctor.longitude]}>
+                                            <Popup>
+                                                <h2>{doctor.name}</h2>
+                                                <p>{doctor.speciality}</p>
+                                                <button onClick={() => setSelDoc(doctor)}>Select</button>
+                                            </Popup>
+                                        </Marker>
+                                    )
+                                }
+                                return null;
+                            })
+                        }
+
+                        {
+                            <Marker position={coords}>
+                                <Popup>
+                                    You are here
+                                </Popup>
+                            </Marker>
+                        }
+                    </MapContainer>
+                )
+            }
             {
                 selDoc && <div>
                     <h2>{selDoc.name}</h2>

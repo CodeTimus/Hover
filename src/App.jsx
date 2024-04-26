@@ -24,7 +24,6 @@ import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
 import PushNotificationButton from './Components/PushNotificationButton.jsx'
-import DoctorProfile from './Components/DoctorProfile.jsx'
 
 const App = () => {
   return (
@@ -35,7 +34,6 @@ const App = () => {
             <Navbar />
             <Routes>
               <Route path="/About" element={<About />} />
-
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/" element={<Home />} />
@@ -55,12 +53,8 @@ const App = () => {
               <Route path="Base" element={<Base />} />
               <Route path="Header" element={<Header />} />
               <Route path="Sidebar" element={<Sidebar />} />
-
               <Route path="DoctorProfile" element={<DoctorProfile />} />
               <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
-
-
-
 
             </Routes>
           </UserProvider>
