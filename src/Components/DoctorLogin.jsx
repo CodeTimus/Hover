@@ -1,29 +1,139 @@
 import React from 'react'
+import { useFormik } from 'formik'
+import { Link, useNavigate } from 'react-router-dom'
+// import Swal from 'sweetalert2'
+import * as Yup from 'yup'
+
+const LoginSchema = Yup.object().shape({
+    password: Yup.string().min(4, 'Too short!').max(20, 'Too Long!'),
+    email: Yup.string().email('Invalid email').required('Required')
+});
 
 const DoctorLogin = () => {
-  return (
-    <div>
-      <div className="container-fluid align-items-center d-flex vh-100 justify-content-center bg-muted" style={{backgroundColor:""}}>
-        <div className="card p-5 " style={{borderRadius:"20px"}}>
-        <div className="row d-flex align-items-center justify-content-center">
-          <div className="col-md-6 ">
-            <form action="">
-              <h2>Doctor Login</h2>
-              <p className="">Please Login to use the Admin platform</p>
-              <input type="text" className='form-control' placeholder='Enter Email' />
-              <input type="text" className='form-control' placeholder='Enter Password' />
-              <button type='submit' className='btn btn-success w-100'>Sign In</button>
-             <p className='text-center'> <span className="text-secondary ">Don't have an account?</span><span className='text-primary'>Sign up</span></p>
-            </form>
-          </div>
-          <div className='col-md-6'>
-            <img className='img-fluid ' src="https://businesstrade.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2019/10/25093252/sign-business-for-sale-contract-768x768.jpg" alt="Loading" />
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
+    const navigate = useNavigate();
+    const loginForm = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        onSubmit: async (values, action) => {
+            console.log(values);
+
+            const res = await fetch('http://localhost:3000/doctor/authenticate', {
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            console.log(res.status);
+            action.resetForm();
+
+            if (res.status === 200) {
+                // Swal.fire({
+                //     icon: 'success',
+                //     title: 'Login Successful'
+                // })
+
+                const data = await res.json();
+                sessionStorage.setItem('doctor', JSON.stringify(data));
+                navigate('/DoctorProfile')
+
+            } else if (res.status === 400
+                ) {
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: 'Login Failed',
+                //     text: 'Invalid email or password'
+
+                // })
+            }
+        },
+        // step6: validation of LoginSchema
+        validationSchema: LoginSchema
+    });
+    return (
+        <section className="vh-100">
+            <div className="container-fluid h-custom">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="col-md-9 col-lg-6 col-xl-5">
+                        <img
+                            src="https://i.pinimg.com/736x/6b/1b/22/6b1b22573f9f3d4bba11a9fa5cb45652.jpg"
+                            className="img-fluid"
+                            alt="Sample image"
+                        />
+                    </div>
+                    <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <form onSubmit={loginForm.handleSubmit}>
+                            
+                            {/* Email input */}
+                            <div className="form-outline mb-4">
+                                <input
+                                    type="email"
+                                    className="form-control form-control-lg"
+                                    placeholder="Enter a valid email address"
+                                    id="email"
+                                    onChange={loginForm.handleChange}
+                                    value={loginForm.values.email}
+                                />
+                                <label className="form-label" htmlFor="form3Example3">
+                                    Email address
+                                </label>
+                                <span style={{ color: 'red', fontsize: '10', marginLeft: 10 }}>{loginForm.touched.name && loginForm.errors.name}</span>
+                            </div>
+                            {/* Password input */}
+                            <div className="form-outline mb-3">
+                                <input
+                                    type="password"
+                                    className="form-control form-control-lg"
+                                    placeholder="Enter password"
+                                    id="password"
+                                    onChange={loginForm.handleChange}
+                                    value={loginForm.values.password}
+                                />
+                                <label className="form-label" htmlFor="form3Example4">
+                                    Password
+                                </label>
+                            </div>
+                            <div className="d-flex justify-content-between align-items-center">
+                                {/* Checkbox */}
+                                <div className="form-check mb-0">
+                                    <input
+                                        className="form-check-input me-2"
+                                        type="checkbox"
+                                        defaultValue=""
+                                        id="form2Example3"
+                                    />
+                                    <label className="form-check-label" htmlFor="form2Example3">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#!" className="text-body">
+                                    Forgot password?
+                                </a>
+                            </div>
+                            <div className="text-center text-lg-start mt-4 pt-2">
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary btn-lg"
+                                    style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+                                >
+                                    Login
+                                </button>
+                                <p className="small fw-bold mt-2 pt-1 mb-0">
+                                    Don't have an account?{" "}
+                                    <Link to="/Signup" className="link-danger">
+                                        Register
+                                    </Link>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    )
+}
 export default DoctorLogin
