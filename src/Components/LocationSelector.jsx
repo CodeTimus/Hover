@@ -1,5 +1,6 @@
 // import { Icon } from 'leaflet';
-import { IconCurrentLocation } from '@tabler/icons-react';
+import { IconCurrentLocation, IconEdit } from '@tabler/icons-react';
+import { enqueueSnackbar } from 'notistack';
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -24,6 +25,29 @@ const LocationSelector = () => {
     const [selDoc, setSelDoc] = useState(null);
     const [selCoords, setSelCoords] = useState([]);
     const [centreCoords, setCentreCoords] = useState([26.8467, 80.9462])
+    const [currentDoctor, setCurrentDoctor] = useState(JSON.parse(sessionStorage.getItem('doctor')));
+
+    const updateDoctor = () => {
+        if (selCoords.length === 0) {
+            enqueueSnackbar('Please select a location', { variant: 'error' });
+            return;
+        }
+        fetch('http://localhost:3000/doctor/update/' + currentDoctor._id, {
+            method: 'PUT',
+            body: JSON.stringify({
+                latitude: selCoords[0],
+                longitude: selCoords[1]
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+                sessionStorage.setItem('doctor', JSON.stringify(data));
+                enqueueSnackbar('Location Updated', { variant: 'success' });
+            })
+    }
 
     const getCurrentLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -36,12 +60,17 @@ const LocationSelector = () => {
 
     return (
         <div>
-            <button onClick={getCurrentLocation} className='btn btn-primary w-25' >
-            <IconCurrentLocation size={30} /> Current Location
-            </button>
+            <div className="d-flex">
+                <button onClick={getCurrentLocation} className='btn btn-primary w-100' >
+                    <IconCurrentLocation size={30} /> Current Location
+                </button>
+                <button onClick={updateDoctor} className='btn btn-primary w-100' >
+                    <IconEdit size={30} /> Update
+                </button>
+            </div>
             <MapContainer
                 onClick={e => console.log(e)}
-                style={{ width: 1200, height: 800 }} center={centreCoords} zoom={20} scrollWheelZoom={true}>
+                style={{ width: '100%', height: 600 }} center={centreCoords} zoom={20} scrollWheelZoom={true}>
                 {
                     <CaptureEvent setCoords={setSelCoords} />
                 }

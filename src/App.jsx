@@ -23,12 +23,9 @@ import Header from './Components/Admin/Header.jsx'
 import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
-<<<<<<< HEAD
 import PushNotificationButton from './Components/PushNotificationButton.jsx'
 import LocationSelector from './Components/LocationSelector.jsx'
-=======
 import ManageDoctor from './Components/ManageDoctor.jsx'
->>>>>>> d891fdc7e1071526a8d69204102e973c5effabd6
 
 const App = () => {
   return (
