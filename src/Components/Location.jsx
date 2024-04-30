@@ -2,22 +2,8 @@
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
-import { useMapEvent, useMapEvents } from 'react-leaflet/hooks'
+import { MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 
-
-const CaptureEvent = ({calculateDistance, coords}) => {
-    
-
-    useMapEvent('click', (e) => {
-        const { lat, lng } = e.latlng;
-        console.log(lat, lng);
-        const distance = calculateDistance(coords[0], coords[1], lat, lng);
-        console.log(distance);
-    })
-
-    return null
-}
 
 const Location = () => {
 
@@ -41,9 +27,6 @@ const Location = () => {
     useEffect(() => {
         fetchDoctors();
     }, []);
-
-
-
 
 
     const getCurrentLocation = () => {
@@ -76,16 +59,6 @@ const Location = () => {
         return deg * (Math.PI / 180);
     }
 
-    useEffect(() => {
-        // console.log(mapRef.current);
-        // return;
-        // const map = mapRef.current.leafletElement;
-        // if (!map) return;
-        // map.on('click', (e) => {
-        //     console.log(e);
-        // });
-    }, [mapRef]);
-
     return (
         <div>
             {
@@ -93,12 +66,6 @@ const Location = () => {
                     <MapContainer
                         onClick={e => console.log(e)}
                         style={{ width: 1200, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
-                        {
-                            <CaptureEvent
-                                calculateDistance={calculateDistance}
-                                coords={coords}
-                            />
-                        }
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

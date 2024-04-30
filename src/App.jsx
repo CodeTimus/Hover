@@ -24,6 +24,7 @@ import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
 import PushNotificationButton from './Components/PushNotificationButton.jsx'
+import LocationSelector from './Components/LocationSelector.jsx'
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
               <Route path="/ManageUser" element={<ManageUser />} />
               <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
               <Route path="/Location" element={<Location />} />
+              <Route path="/location-selector" element={<LocationSelector />} />
               <Route path="/AddDoctor" element={<AddDoctor />} />
               <Route path="/DoctorLogin" element={<DoctorLogin />} />
               <Route path="/ProfileCard" element={<ProfileCard />} />
