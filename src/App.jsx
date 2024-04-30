@@ -23,8 +23,7 @@ import Header from './Components/Admin/Header.jsx'
 import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
-import PushNotificationButton from './Components/PushNotificationButton.jsx'
-import DoctorProfile from './Components/DoctorProfile.jsx'
+import ManageDoctor from './Components/ManageDoctor.jsx'
 
 const App = () => {
   return (
@@ -46,6 +45,7 @@ const App = () => {
               <Route path="/Feedback" element={<Feedback />} />
               <Route path="/*" element={<Notfound />} />
               <Route path="/ManageUser" element={<ManageUser />} />
+              <Route path="/ManageDoctor" element={<ManageDoctor />} />
               <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
               <Route path="/Location" element={<Location />} />
               <Route path="/AddDoctor" element={<AddDoctor />} />
@@ -55,11 +55,6 @@ const App = () => {
               <Route path="Base" element={<Base />} />
               <Route path="Header" element={<Header />} />
               <Route path="Sidebar" element={<Sidebar />} />
-
-              <Route path="DoctorProfile" element={<DoctorProfile />} />
-              <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
-
-
 
 
             </Routes>

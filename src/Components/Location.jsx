@@ -62,7 +62,7 @@ const Location = () => {
 
     return (
         <div>
-            <MapContainer style={{ width: 1200, height: 800 }} center={coords.length > 0 ? coords : [26.8763, 80.9762]} zoom={20} scrollWheelZoom={true}>
+            <MapContainer style={{ width: 1400, height: 800 }} center={coords.length > 0 ? coords : [26.846878, 80.944733]} zoom={20} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
