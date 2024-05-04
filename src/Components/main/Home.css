@@ -119,7 +119,7 @@ header {
 
 .main-home {
     padding: 2rem 7%;
-    background-image: url(images/blurbg1.jpg);
+    background-image: url(../../assets/blurbg1.jpg);
     width: 100%;
     min-height: 100vh;
     background-size: cover;
@@ -277,7 +277,7 @@ header {
     padding: 3rem 3rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: black;
-    background-image: url(images/backgroung-pattern-1.png);
+    background-image: url(../../assets/backgroung-pattern-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -433,7 +433,7 @@ header {
 
 .main-doctors {
     padding: 5rem 9%;
-    background-image: url(images/backgroung-pattern-3.png);
+    background-image: url(../../assets/backgroung-pattern-3.png);
     background-color: white;
     width: 100%;
 

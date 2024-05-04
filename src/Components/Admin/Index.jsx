@@ -1,27 +1,17 @@
-import { useState } from 'react'
-import './admin.css'
-import Header from './Header'
+import React from 'react'
 import Sidebar from './Sidebar'
-import Home from './Base'
 import { Outlet } from 'react-router-dom'
 
-function Main() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
-
-  const OpenSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle)
-  }
-
+const Admin = () => {
   return (
-    <div>
-      <div className='grid-container'>
-        <Header OpenSidebar={OpenSidebar} > <Outlet /> </Header>
-        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
-        
-      </div>
-      
-    </div>
+    <>
+   
+      <Sidebar />
+   
+     <div style={{marginLeft:"100px"}}>
+    <Outlet />   </div>                  
+    </>
   )
 }
 
-export default Main
+export default Admin

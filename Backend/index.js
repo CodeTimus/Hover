@@ -21,6 +21,8 @@ app.use('/Feedback',FeedbackRouter)
 app.use('/doctor', DoctorsRouter);
 app.use("/util" , UtilsRouter);
 
+app.use(express.static('./uploads'));
+
 app.listen(port,() =>{
     console.log('Server is Running at the port 3000')
 })
