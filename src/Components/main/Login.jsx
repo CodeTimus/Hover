@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useNavigate } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -11,7 +11,7 @@ import useUserContext from '../../UserContext';
 
 function Login() {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const SignupForm = useFormik({
@@ -63,6 +63,7 @@ function Login() {
       if (res.status === 200){
         enqueueSnackbar('Login Successfully', {variant: 'success'})
         setLoggedIn(true)
+        navigate('/')
       } else {
         enqueueSnackbar('Something went wrong', {variant: 'error'})
       }
