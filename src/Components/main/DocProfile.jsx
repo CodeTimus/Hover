@@ -6,6 +6,7 @@ import app_config from "../../config";
 import { useFormik } from "formik";
 import { messaging } from '../Firebase';
 import { getToken } from 'firebase/messaging';
+import './DocProfile.css'
 
 
 const DocProfile = () => {

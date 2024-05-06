@@ -12,7 +12,7 @@ const myschema = new Schema({
     cer1: {type: String},
     cer2: {type:String},
     desc: {type: String},
-    avatar: {type:String, default: "avatar_placeholder.png"},
+    avatar: {type:String, default: "avatar_placeholder.webp"},
     createdAt: Date,
     notiToken: {type:String, default: ''}
 });

@@ -67,7 +67,8 @@ const Sidebar = () => {
             <div className="job">Web designer</div>
           </div>
         </div>
-        <i className="bx bx-log-out" id="log_out" />
+        
+        <Link to="/" ><i className="bx bx-log-out" id="log_out" /></Link>
       </li>
     </ul>
   </div>

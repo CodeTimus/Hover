@@ -11,7 +11,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 98px;
+  width: 100px;
   background: #ede891;
   padding: 6px 14px;
   z-index: 99;
@@ -212,14 +212,14 @@
   right: 0;
   transform: translateY(-50%);
   background: #1d1b31;
-  width: 100%;
+  width: 80px;
   height: 60px;
   line-height: 60px;
   border-radius: 0px;
   transition: all 0.5s ease;
 }
 .sidebar.open .profile #log_out {
-  width: 50px;
+  width: 80px;
   background: none;
 }
 .home-section {

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* body {
+body {
     background-color: white
-} */
+}
 
 :root {
     --maincolor: #2ec8a6;
@@ -41,6 +41,8 @@ html {
 
 
 }
+.nav-hover:hover {
+    font-weight:bolder;}
 
 .navbar a {
     color: var(--textcolor);
@@ -53,6 +55,9 @@ html {
 .navbar a:hover {
     color: var(--maincolor);
 }
+.navbar-transparent {
+    background: transparent !important;
+  }
 
 .navbar a::after {
     content: "";
