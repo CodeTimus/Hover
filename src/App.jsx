@@ -27,7 +27,7 @@ import Main from './Components/main/index.jsx'
 import DocProfile from './Components/main/DocProfile.jsx'
 import AdminDashboard from './Components/Admin/AdminDashboard.jsx'
 import ProfileCard from './Components/main/ProfileCard.jsx'
-import Navbar from './Components/Doctor/Navbar.jsx'
+// import Navbar from './Components/main/Navbar.jsx'
 
 const App = () => {
   return (

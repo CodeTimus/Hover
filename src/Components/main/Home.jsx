@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import image1 from '../../assets/hero2.png'
+import team1 from '../../assets/team1.jpg'
+import team2 from '../../assets/team2.jpg'
+import pic1 from '../../assets/pic1.jpg'
 // import "./areeba.css"
-import './Home.css'
+// import './Home.css'
 
 const Home = () => {
   return (
@@ -56,7 +60,7 @@ const Home = () => {
               </div>
             </div>
             <div className="home-right-content">
-              <img src="assets/hero2.png" alt="" />
+              <img src={image1} alt="" />
             </div>
             <div className="header__form">
               {/* <form>
@@ -148,7 +152,7 @@ const Home = () => {
                 <i className="fa-solid fa-eye" />
                 <i className="fa-solid fa-heart" />
               </div>
-              <img src="../" alt="" />
+              <img src={team1} alt="" />
               <div className="doc-details">
                 <h2>Dr.Awasthi</h2>
                 <i className="fa-brands fa-linkedin" />
@@ -161,14 +165,14 @@ const Home = () => {
                 <i className="fa-solid fa-eye" />
                 <i className="fa-solid fa-heart" />
               </div>
-              <img src="images/team2.jpg" alt="" />
+              <img src={team2} alt="" />
               <div className="doc-details">
                 <h2>Dr.bhatiya</h2>
                 <i className="fa-brands fa-linkedin" />
                 <i className="fa-brands fa-instagram" />
               </div>
             </div>
-            <div className="doc-poster">
+            {/* <div className="doc-poster">
               <div className="doc-icons">
                 <i className="fa-solid fa-share" />
                 <i className="fa-solid fa-eye" />
@@ -219,7 +223,7 @@ const Home = () => {
                 <i className="fa-brands fa-linkedin" />
                 <i className="fa-brands fa-instagram" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* new One */}
@@ -358,7 +362,7 @@ const Home = () => {
             <div className="main-inner-review">
               <div className="review-inner-content">
                 <div className="review-box">
-                  <img src="images/pic1.jpg" alt="" />
+                  <img src={pic1} alt="" />
                   <h2>Areeba Shakeel</h2>
                   <div className="review-stars">
                     <i className="fa-solid fa-star" />
