@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import certificate from '../../assets/heartCertificate.jpg'
+// import certificate from '../../assets/heartCertificate.jpg'
 import LocationSelector from '../LocationSelector';
 import app_config from "../../config";
 import { useFormik } from "formik";
