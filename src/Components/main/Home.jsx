@@ -56,7 +56,7 @@ const Home = () => {
               </div>
             </div>
             <div className="home-right-content">
-              <img src="assets/hero2.png" alt="" />
+              <img src="/assets/hero2.png" alt="" />
             </div>
             <div className="header__form">
               {/* <form>
