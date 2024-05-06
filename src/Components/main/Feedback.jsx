@@ -2,6 +2,7 @@ import React from 'react'
 import './Feedback.css'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
+import docneww from '../../assets/docneww.png'
 
 const Feedback = () => {
     const FeedbackForm = useFormik({
@@ -40,7 +41,7 @@ const Feedback = () => {
             <div className="contact1">
                 <div className="container-contact1">
                     <div className="contact1-pic js-tilt" data-tilt="">
-                        <img src="images/docneww.png" alt="" />
+                        <img src={docneww} alt="" />
                     </div>
                     <form onSubmit={FeedbackForm.handleSubmit} className="contact1-form validate-form">
                         <span className="contact1-form-title">
