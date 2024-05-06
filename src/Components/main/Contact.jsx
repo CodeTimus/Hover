@@ -1,7 +1,7 @@
 import React from 'react'
 import {useFormik} from 'formik'
 // import "./areeba.css"
-import './Contact.css'
+// import './Contact.css'
 // import {enqueueSnackbar} from 'notistack'
 // import * as yup from 'yup'
 
@@ -54,7 +54,7 @@ const Contact = () => {
     crossOrigin="anonymous"
   />
   <section className="contact-section">
-    <div className="contact-bg">
+    <div className="contact-bg2">
       <h3>Get in Touch with Us</h3>
       <h2>contact us</h2>
       <div className="line">
@@ -62,7 +62,7 @@ const Contact = () => {
         <div />
         <div />
       </div>
-      <p className="text text-light">
+      <p className="textcontact">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste
         facilis quos impedit fuga nobis modi debitis laboriosam velit reiciendis
         quisquam alias corporis, maxime enim, optio ab dolorum sequi qui.
@@ -75,21 +75,21 @@ const Contact = () => {
             <i className="fas fa-mobile-alt" />
           </span>
           <span>Phone No.</span>
-          <span className="text">1-2392-23928-2</span>
+          <span className="textcontact">1-2392-23928-2</span>
         </div>
         <div>
           <span>
             <i className="fas fa-envelope-open" />
           </span>
           <span>E-mail</span>
-          <span className="text">mail@company.com</span>
+          <span className="textcontact">mail@company.com</span>
         </div>
         <div>
           <span>
             <i className="fas fa-map-marker-alt" />
           </span>
           <span>Address</span>
-          <span className="text">
+          <span className="textcontact">
             2939 Patrick Street, Vicotria TX, United States
           </span>
         </div>
@@ -98,7 +98,7 @@ const Contact = () => {
             <i className="fas fa-clock" />
           </span>
           <span>Opening Hours</span>
-          <span className="text">Monday - Friday (9:00 AM to 5:00 PM)</span>
+          <span className="textcontact">Monday - Friday (9:00 AM to 5:00 PM)</span>
         </div>
       </div>
       <div className="contact-form">
@@ -106,7 +106,7 @@ const Contact = () => {
           <div>
             <input
               type="text"
-              className="form-control"
+              className="form-control2"
               placeholder="First Name"
               id='fname'
               onChange={ContactForm.handleChange}
@@ -114,7 +114,7 @@ const Contact = () => {
             />
             <input
               type="text"
-              className="form-control"
+              className="form-control2"
               placeholder="Last Name"
               id='lname'
               onChange={ContactForm.handleChange}
@@ -122,12 +122,12 @@ const Contact = () => {
             />
           </div>
           <div>
-            <input type="email" className="form-control" placeholder="E-mail"
+            <input type="email" className="form-control2" placeholder="E-mail"
             id='email'
             onChange={ContactForm.handleChange}
             value={ContactForm.values.email} />
 
-            <input type="text" className="form-control" placeholder="Phone" 
+            <input type="text" className="form-control2" placeholder="Phone" 
             id='phoneNo'
             onChange={ContactForm.handleChange}
             value={ContactForm.values.phoneNo}/>
@@ -135,7 +135,7 @@ const Contact = () => {
           <textarea
             rows={5}
             placeholder="Message"
-            className="form-control"
+            className="form-control2"
             defaultValue={""}
             id='message'
               onChange={ContactForm.handleChange}
@@ -164,9 +164,9 @@ const Contact = () => {
         tabIndex={0}
       />
     </div>
-    <div className="contact-footer">
+    <div className="contact-footer2">
       <h3>Follow Us</h3>
-      <div className="social-links">
+      <div className="social-linkss">
         <a href="#" className="fab fa-facebook-f" />
         <a href="#" className="fab fa-twitter" />
         <a href="#" className="fab fa-instagram" />
