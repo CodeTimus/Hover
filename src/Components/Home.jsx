@@ -40,14 +40,13 @@ const Home = () => {
   <div className="main-home">
     <div className="home">
       <div className="home-left-content">
-        <span>welcome to Emergency Doctor Services</span>
+        <span>Welcome to <br />Emergency Doctor Services</span>
         <h2>
           We take care our
           <br /> Patients Healths
         </h2>
         <p className="lorem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus <br />
-          numquam veniam porro eius, fugiat vero ut ipsum libero
+        Our superspecialist doctors provide the highest quality of <br /> care through a team-based, doctor-led model.
         </p>
         <div className="home-btn">
           <Link to="/Location">Explore Map</Link>
@@ -60,6 +59,7 @@ const Home = () => {
         <img src="images/hero2.png" alt="" />
       </div>
       <div className="header__form">
+        
   {/* <form>
     <h4>Book Now</h4>
     <input type="text" placeholder="First Name" />
@@ -69,6 +69,7 @@ const Home = () => {
     <button className="btn form__btn2">Book Appointment</button>
   </form> */}
 </div>
+
 
     </div>
   </div>
@@ -107,6 +108,8 @@ const Home = () => {
     </div>
   </div>
   {/* home section ends */}
+  
+  
   {/* About us section started */}
   {/* <div className="main-about">
     <div className="about-heading">About Us</div>
@@ -137,6 +140,7 @@ const Home = () => {
     </div>
   </div> */}
   {/* About us section ends */}
+  
   {/* our doctors */}
   <div className="main-doctors">
     <div className="doctors-heading">
@@ -188,7 +192,7 @@ const Home = () => {
           <i className="fa-solid fa-eye" />
           <i className="fa-solid fa-heart" />
         </div>
-        <img src="images/team4.jpg" alt="" />
+        {/* <img src="images/team4.jpg" alt="" />
         <div className="doc-details">
           <h2>Dr.Sinha</h2>
           <i className="fa-brands fa-linkedin" />
@@ -206,8 +210,8 @@ const Home = () => {
           <h2>Dr.Agarwal</h2>
           <i className="fa-brands fa-linkedin" />
           <i className="fa-brands fa-instagram" />
-        </div>
-      </div>
+        </div> */}
+      {/* </div>
       <div className="doc-poster">
         <div className="doc-icons">
           <i className="fa-solid fa-share" />
@@ -219,11 +223,10 @@ const Home = () => {
           <h2>Dr.Jain</h2>
           <i className="fa-brands fa-linkedin" />
           <i className="fa-brands fa-instagram" />
-        </div>
+        </div> */}
       </div>
     </div>
   </div>
-{/* new One */}
 
 {/* <section class="section__container service__container">
       <div class="service__header">
@@ -267,6 +270,7 @@ const Home = () => {
       </div>
     </section> */}
   {/* our doctors ended */}
+  
   {/* our services */}
   <div className="our-service">
     <div className="service-heading">
@@ -350,6 +354,7 @@ const Home = () => {
     </div>
   </div>
   {/* our services ended */}
+  
   {/* customer review */}
   <div className="main-review">
     <section>
@@ -425,51 +430,98 @@ const Home = () => {
     </section>
   </div>
   {/* customer review */}
-  {/* footer */}
-  <footer class="footer">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="footer-col">
-  	 			<h4>company</h4>
-  	 			<ul>
-  	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
-  	 				<li><a href="#">privacy policy</a></li>
-  	 				<li><a href="#">affiliate program</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>get help</h4>
-  	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>online shop</h4>
-  	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>follow us</h4>
-  	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
-  	 			</div>
-  	 		</div>
-  	 	</div>
-  	 </div>
-  </footer>
-  {/* footer ended */}
+
+  
+  <footer className="footer">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-3 col-md-6 col-sm-6">
+        <div className="footer-about">
+          <div className="footer-logo">
+            <a href="#">
+              <img src="img/footer-logo.png" alt="" />
+            </a>
+          </div>
+          <p>
+            The Customer is at the heart of our unique bussiness model, which
+            include design.
+          </p>
+          <a href="#">
+            <img src="img/payment.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+        <div className="footer-widget">
+          <h6>Shopping</h6>
+          <ul>
+            <li>
+              <a href="#">Clothing Store</a>
+            </li>
+            <li>
+              <a href="#">Trending Shoes</a>
+            </li>
+            <li>
+              <a href="#">Accessories</a>
+            </li>
+            <li>
+              <a href="#">Sale</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="col-lg-2  col-md-3 col-sm-6">
+        <div className="footer-widget">
+          <h6>Links</h6>
+          <ul>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Payment Methods</a>
+            </li>
+            <li>
+              <a href="#">Delivary</a>
+            </li>
+            <li>
+              <a href="#">Return &amp; Exchanges</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+        <div className="footer-widget">
+          <h6>NewsLetter</h6>
+          <div className="footer-newslatter">
+            <p>
+              Be the first to know about new arrivals, look books, sales &amp;
+              promos!
+            </p>
+            <form action="#">
+              <input type="text" placeholder="Your Email" />
+              <button type="submit">
+                <span>
+                  <i className="fa fa-envelope" arial-hidden="true" />
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-lg-12 text-center">
+        <div className="footer-copyright-text">
+          <p>
+            Copyright © 2024 All rights reserved | This template is made with{" "}
+            <i className="fa fa-heart-o" arial-hidden="true" />
+            by <a href="#">Kumar</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </>
 
     </div>
