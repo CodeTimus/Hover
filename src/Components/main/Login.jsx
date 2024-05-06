@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -6,12 +7,12 @@ import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
-import useUserContext from '../UserContext';
+import useUserContext from '../../UserContext';
 
 
 function Login() {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const SignupForm = useFormik({
@@ -63,6 +64,7 @@ function Login() {
       if (res.status === 200){
         enqueueSnackbar('Login Successfully', {variant: 'success'})
         setLoggedIn(true)
+        navigate('/')
       } else {
         enqueueSnackbar('Something went wrong', {variant: 'error'})
       }
@@ -109,7 +111,7 @@ function Login() {
               onChange={SignupForm.handleChange}
               value={SignupForm.values.password} />
             </div>
-            <button className='btn fs-4'>Sign up</button>
+            <button className='log-btn fs-4'>Sign up</button>
            
             <p className="social-text loginp"> Sign in with social platforms</p>
             <div className="social-media">
@@ -136,7 +138,7 @@ function Login() {
               onChange={LoginForm.handleChange}
               value={LoginForm.values.password} />
             </div>
-            <button className='btn fs-4'>Sign In</button>
+            <button className='log-btn fs-4'>Sign In</button>
             <p className="social-text loginp">Or Sign up with social platforms</p>
             <div className="social-media">
              
@@ -158,7 +160,7 @@ function Login() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
             </p>
-            <button className="btn transparent" onClick={handleSignUpClick}>
+            <button className="log-btn transparent" onClick={handleSignUpClick}>
               Sign In
               </button>
           </div>
@@ -171,7 +173,7 @@ function Login() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti.
             </p>
-            <button onClick={handleSignInClick} className="btn transparent" id="sign-in-btn">
+            <button onClick={handleSignInClick} className="log-btn transparent" id="sign-in-btn">
               Sign in
             </button>
           </div>

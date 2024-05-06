@@ -27,18 +27,6 @@ const ProfileCard = () => {
 
   const displayDoctor = () => {
     return doctor.map((doc) => (
-      // <div className="conatainer">
-      //   <div className="col-md-4">
-      //     <div className="card p-3 mb-5 bg-dark p-card">
-      //       <h3 style={{ paddingLeft: "20px" }} className="mt-3 text-light">{obj.pname}</h3>
-      //       <p style={{ paddingLeft: "20px" }} className="text-light">{obj.pprice}</p>
-      //       <Link to={'/view/' + obj._id} className="btn btn-outline-primary m-2">Know More</Link>
-
-
-      //     </div>
-      //   </div>
-      // </div>
-
         <div className="col-md-4">
           <div className="box88">
             <div className="profile-box88">
@@ -52,7 +40,7 @@ const ProfileCard = () => {
                   A front-end developer is a software developer. Who works on
                   the client-side, of a web application.
                 </p>
-                <Link to={'/DoctorProfile/' + doc._id} className="btn btn-outline-primary m-2">Know More</Link>
+                <Link to={'/main/DocProfile/' + doc._id} className="btn btn-outline-primary m-2">Know More</Link>
               </div>
             </div>
           </div>
@@ -65,15 +53,6 @@ const ProfileCard = () => {
 
   return (
     <div className="">
-       <header className='bg-body-tertiory'>
-                <div className='container py-5'>
-
-                    <p className='display-2 text-center mb-5 fw-bold'>All Products</p>
-
-                    <input type="text" placeholder='Search Items' className='form-control w-75 m-auto'  />
-
-                </div>
-            </header >
       <div className='row mt-5  d-flex justify-content-center'> {displayDoctor()} </div>
     </div>
   );

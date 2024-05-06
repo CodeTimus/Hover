@@ -38,7 +38,7 @@ const DoctorLogin = () => {
 
                 const data = await res.json();
                 sessionStorage.setItem('doctor', JSON.stringify(data));
-                navigate('/DoctorProfile')
+                navigate('/doctor/DoctorProfile')
 
             } else if (res.status === 400
                 ) {

@@ -86,6 +86,36 @@ const AddDoctor = () => {
       }
     });
   };
+  const uploadDegree = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setSelProject(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:3000/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
+  const uploadCertificate = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setSelProject(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:3000/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
 
   return (
 
@@ -205,7 +235,7 @@ const AddDoctor = () => {
               <input
                 type="file" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input"
-                onChange={uploadFile}
+                onChange={uploadDegree}
               />
             </div>
             <div className="form-outline">
@@ -215,7 +245,7 @@ const AddDoctor = () => {
               <input
                 type="file" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input"
-                onChange={uploadFile}
+                onChange={uploadCertificate}
               />
             </div>
 

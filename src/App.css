@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* body {
+body {
     background-color: white
-} */
+}
 
 :root {
     --maincolor: #2ec8a6;
@@ -41,6 +41,8 @@ html {
 
 
 }
+.nav-hover:hover {
+    font-weight:bolder;}
 
 .navbar a {
     color: var(--textcolor);
@@ -53,6 +55,9 @@ html {
 .navbar a:hover {
     color: var(--maincolor);
 }
+.navbar-transparent {
+    background: transparent !important;
+  }
 
 .navbar a::after {
     content: "";
@@ -693,7 +698,7 @@ html {
     border-color: #4481eb;
   }
   
-  .btn {
+  .log-btn {
     width: 150px;
     background-color: #5995fd;
     border: none;
@@ -709,7 +714,7 @@ html {
     
   }
   
-  .btn:hover {
+  .log-btn:hover {
     background-color: #4d84e2;
   }
   .panels-container {
@@ -781,7 +786,7 @@ html {
     padding: 0.7rem 0;
   }
   
-  .btn.transparent {
+  .log-btn.transparent {
     margin: 0;
     background: none;
     border: 2px solid #fff;

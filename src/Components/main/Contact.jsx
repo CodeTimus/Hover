@@ -1,6 +1,7 @@
 import React from 'react'
 import {useFormik} from 'formik'
-// import './Contact.css'
+// import "./areeba.css"
+import './Contact.css'
 // import {enqueueSnackbar} from 'notistack'
 // import * as yup from 'yup'
 
@@ -61,7 +62,11 @@ const Contact = () => {
         <div />
         <div />
       </div>
+<<<<<<< HEAD:src/Components/Contact.jsx
       <p className="textcontact">
+=======
+      <p className="text text-light">
+>>>>>>> 601fc7d633ca901fd9f01c5135b947b8fa3231f3:src/Components/main/Contact.jsx
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste
         facilis quos impedit fuga nobis modi debitis laboriosam velit reiciendis
         quisquam alias corporis, maxime enim, optio ab dolorum sequi qui.

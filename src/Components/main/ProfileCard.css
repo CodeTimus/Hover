@@ -30,7 +30,7 @@
     box-shadow: 1px 1px 5px #616161;
   }
   .profile-img88 {
-    background-color: rgb(0, 54, 155);
+    background-color: #2ec8a6;
     border-radius: 0 20px 0 20px;
     height: 9pc;
     width: auto;
@@ -40,13 +40,15 @@
   .profile-img88 img {
     border-radius: 100%;
     border: 2px solid #f0f0f0;
-    width: 40%;
+    width: 70%;
+    height: 150%;
+    margin-top: 30px;;
   }
-  .profile-img88:hover {
+  /* .profile-img88:hover {
     padding-top: 3pc;
-  }
+  } */
   .profile-docs88 {
-    padding-top: 3pc;
+    padding-top: 6pc;
   }
   .profile-docs88 h1 {
     font-size: 25px;

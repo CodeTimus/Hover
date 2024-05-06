@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
+import {Link} from 'react-router-dom'
 
 
 const Location = () => {
@@ -80,8 +81,8 @@ const Location = () => {
                                         <Marker key={doctor._id} position={[doctor.latitude, doctor.longitude]}>
                                             <Popup>
                                                 <h2>{doctor.name}</h2>
-                                                <p>{doctor.speciality}</p>
-                                                <button onClick={() => setSelDoc(doctor)}>Select</button>
+                                                <h4 className='mt-3'>{doctor.speciality}</h4>
+                                                <Link to={'/main/DocProfile/' + doctor._id} className="btn btn-outline-primary m-2">View Profile</Link>
                                             </Popup>
                                         </Marker>
                                     )

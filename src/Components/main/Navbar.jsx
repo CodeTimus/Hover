@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import useUserContext from '../UserContext'
+import useUserContext from '../../UserContext'
+
 
 const Navbar = () => {
   const{loggedIn,logout} = useUserContext()
@@ -14,7 +15,7 @@ const Navbar = () => {
       );
     } else {
       return (
-        <Link className="nav-link active" aria-current="page" to="/Login">
+        <Link className="nav-link active" aria-current="page" to="/main/Login">
           Register
         </Link>
       )
@@ -25,7 +26,7 @@ const Navbar = () => {
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <Link className="navbar-brand text-success" to="/admin/base">
+    <Link className="navbar-brand text-success" to="/admin/AdminDashboard">
       EMS
     </Link>
     <button
@@ -42,16 +43,14 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <Link className="nav-link active" aria-current="page" to="/Home">
+        <Link className="nav-link active" aria-current="page" to="/main/Home">
           Home
         </Link>
         {showLoggedIn()}
         <Link className="nav-link" to="/Contact">
           Contact Us
         </Link>
-        <Link className="nav-link" to="/Feedback">
-          Feedback
-        </Link>
+       
         <Link className="nav-link" to="/Readmore1">
         About
         </Link>
