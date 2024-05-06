@@ -19,6 +19,7 @@ const AddDoctor = () => {
     initialValues: {
       name: '',
       email:'',
+      password:'',
       contact:'',  
       latitude: '',
       longitude: '',
@@ -117,6 +118,17 @@ const AddDoctor = () => {
                 id="email" placeholder="Email"
                 onChange={addProjectForm.handleChange}
                 value={addProjectForm.values.email}
+              />
+
+            </div>
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="password"
+                className="form-control shadow input mb-4"
+                id="password" placeholder="Password"
+                onChange={addProjectForm.handleChange}
+                value={addProjectForm.values.password}
               />
 
             </div>

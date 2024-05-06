@@ -24,7 +24,8 @@ import Sidebar from './Components/Admin/Sidebar.jsx'
 import Main from './Components/Admin/Index.jsx'
 import DoctorProfile from './Components/DoctorProfile.jsx'
 import PushNotificationButton from './Components/PushNotificationButton.jsx'
-import DoctorProfile from './Components/DoctorProfile.jsx'
+import LocationSelector from './Components/LocationSelector.jsx'
+import ManageDoctor from './Components/ManageDoctor.jsx'
 
 const App = () => {
   return (
@@ -35,7 +36,6 @@ const App = () => {
             <Navbar />
             <Routes>
               <Route path="/About" element={<About />} />
-
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/" element={<Home />} />
@@ -46,8 +46,10 @@ const App = () => {
               <Route path="/Feedback" element={<Feedback />} />
               <Route path="/*" element={<Notfound />} />
               <Route path="/ManageUser" element={<ManageUser />} />
+              <Route path="/ManageDoctor" element={<ManageDoctor />} />
               <Route path="/DoctorProfile/:id" element={<DoctorProfile />} />
               <Route path="/Location" element={<Location />} />
+              <Route path="/location-selector" element={<LocationSelector />} />
               <Route path="/AddDoctor" element={<AddDoctor />} />
               <Route path="/DoctorLogin" element={<DoctorLogin />} />
               <Route path="/ProfileCard" element={<ProfileCard />} />
@@ -55,13 +57,8 @@ const App = () => {
               <Route path="Base" element={<Base />} />
               <Route path="Header" element={<Header />} />
               <Route path="Sidebar" element={<Sidebar />} />
-
               <Route path="DoctorProfile" element={<DoctorProfile />} />
               <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
-
-
-
-
             </Routes>
           </UserProvider>
         </BrowserRouter>
