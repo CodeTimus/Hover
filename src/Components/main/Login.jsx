@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -137,6 +137,11 @@ function Login() {
               <input className='LoginInput' type="password" placeholder="Password" name='password'
               onChange={LoginForm.handleChange}
               value={LoginForm.values.password} />
+            </div>
+            <div>
+              <Link to="/main/ForgetPassword" className="text-body" >
+              Forgot Password
+              </Link>
             </div>
             <button className='log-btn fs-4'>Sign In</button>
             <p className="social-text loginp">Or Sign up with social platforms</p>

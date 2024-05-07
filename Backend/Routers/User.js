@@ -13,6 +13,37 @@ router.post('/add',(req,res)=>{
         
     });
 })
+router.get("/getbyemail/:email",(req,res) => {
+    console.log(req.params.email)
+    Model.find({email: req.params.email})
+    .then((result) => {
+        res.json(result)
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).json(err)
+    });
+});
+router.get("/update/:id",(req,res) => {
+    Model.findByIdAndUpdate(req.params.id , req.body, {new: true})
+    .then((result) => {
+        res.status(200).json(result);
+        
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).json(err)
+    });
+});
+router.get("/getuser/:id",(req,res) => {
+   
+    Model.findById(req.params.id)
+    .then((result) => {
+        res.status(500).json(result)
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).json(err)
+    });
+});
+
 router.post('/authenticate',(req,res)=>{
     Model.findOne(req.body)
     .then((result) => {
