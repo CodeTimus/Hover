@@ -47,11 +47,11 @@ const Navbar = () => {
           Home
         </Link>
         {showLoggedIn()}
-        <Link className="nav-link" to="/Contact">
+        <Link className="nav-link" to="/main/Contact">
           Contact Us
         </Link>
        
-        <Link className="nav-link" to="/Readmore1">
+        <Link className="nav-link" to="/main/Readmore1">
         About
         </Link>
         
