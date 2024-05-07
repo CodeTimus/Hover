@@ -10,7 +10,7 @@ admin.initializeApp({
 
 router.post('/sendNotification', (req, res) => {
     const { notiToken, data } = req.body;
-
+    console.log(notiToken);
     const message = {
         data,
         token: notiToken

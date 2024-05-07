@@ -15,7 +15,7 @@ const DoctorProfile = () => {
   const url = app_config.apiUrl;
 
   const updateUser = async (dataToUpdate) => {
-    const res = await fetch(url + "/doctor/update/" + currentUser._id, {
+    const res = await fetch(url + "/doctor/update/" + currentDoctor._id, {
       method: "PUT",
       body: JSON.stringify(dataToUpdate),
       headers: {
@@ -25,7 +25,7 @@ const DoctorProfile = () => {
     console.log(res.status);
     const doctordata = await res.json();
     console.log(doctordata);
-    setCurrentUser(doctordata);
+    setCurrentDoctor(doctordata);
     sessionStorage.setItem("doctor", JSON.stringify(doctordata));
   }
 
@@ -215,7 +215,7 @@ const DoctorProfile = () => {
                         <h4 className='fs-1'>{currentDoctor.name}</h4>
                         <p className="text-secondary mb-1 fs-2">{currentDoctor.speciality}</p>
 
-                        <button onClick={enableNotification} disabled={currentDoctor.notiToken}>
+                        <button type='button' onClick={enableNotification} disabled={currentDoctor.notiToken}>
                           {currentDoctor.notiToken ? 'Notification Enabled' : 'Enable Notification'}
                         </button>
 
