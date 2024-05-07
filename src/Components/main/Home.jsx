@@ -4,6 +4,8 @@ import image1 from '../../assets/hero2.png'
 import team1 from '../../assets/team1.jpg'
 import team2 from '../../assets/team2.jpg'
 import pic1 from '../../assets/pic1.jpg'
+import pic2 from '../../assets/pic2.jpg'
+import pic3 from '../../assets/pic3.jpg'
 // import "./areeba.css"
 // import './Home.css'
 
@@ -383,7 +385,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="review-box">
-                  <img src="images/pic2.jpg" alt="" />
+                  <img src={pic2} alt="" />
                   <h2>Bharvi Sharma</h2>
                   <div className="review-stars">
                     <i className="fa-solid fa-star" />
@@ -404,7 +406,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="review-box">
-                  <img src="images/pic3.jpg" alt="" />
+                  <img src={pic3}alt="" />
                   <h2>Irshad Ansari</h2>
                   <div className="review-stars">
                     <i className="fa-solid fa-star" />
@@ -429,49 +431,97 @@ const Home = () => {
         </div>
         {/* customer review */}
         {/* footer */}
-        <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="footer-col">
-                <h4>company</h4>
-                <ul>
-                  <li><a href="#">about us</a></li>
-                  <li><a href="#">our services</a></li>
-                  <li><a href="#">privacy policy</a></li>
-                  <li><a href="#">affiliate program</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>get help</h4>
-                <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">shipping</a></li>
-                  <li><a href="#">returns</a></li>
-                  <li><a href="#">order status</a></li>
-                  <li><a href="#">payment options</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>online shop</h4>
-                <ul>
-                  <li><a href="#">watch</a></li>
-                  <li><a href="#">bag</a></li>
-                  <li><a href="#">shoes</a></li>
-                  <li><a href="#">dress</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>follow us</h4>
-                <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            </div>
+        <footer className="footer">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-3 col-md-6 col-sm-6">
+        <div className="footer-about">
+          <div className="footer-logo">
+            <a href="#">
+              <img src="img/footer-logo.png" alt="" />
+            </a>
           </div>
-        </footer>
+          <p>
+            The Customer is at the heart of our unique bussiness model, which
+            include design.
+          </p>
+          <a href="#">
+            <img src="img/payment.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+        <div className="footer-widget">
+          <h6>Shopping</h6>
+          <ul>
+            <li>
+              <a href="#">Clothing Store</a>
+            </li>
+            <li>
+              <a href="#">Trending Shoes</a>
+            </li>
+            <li>
+              <a href="#">Accessories</a>
+            </li>
+            <li>
+              <a href="#">Sale</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="col-lg-2  col-md-3 col-sm-6">
+        <div className="footer-widget">
+          <h6>Links</h6>
+          <ul>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Payment Methods</a>
+            </li>
+            <li>
+              <a href="#">Delivary</a>
+            </li>
+            <li>
+              <a href="#">Return &amp; Exchanges</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+        <div className="footer-widget">
+          <h6>NewsLetter</h6>
+          <div className="footer-newslatter">
+            <p>
+              Be the first to know about new arrivals, look books, sales &amp;
+              promos!
+            </p>
+            <form action="#">
+              <input type="text" placeholder="Your Email" />
+              <button type="submit">
+                <span>
+                  <i className="fa fa-envelope" arial-hidden="true" />
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-lg-12 text-center">
+        <div className="footer-copyright-text">
+          <p>
+            Copyright © 2024 All rights reserved | This template is made with{" "}
+            <i className="fa fa-heart-o" arial-hidden="true" />
+            by <a href="#">CodingWithkumar</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
         {/* footer ended */}
       </>
 

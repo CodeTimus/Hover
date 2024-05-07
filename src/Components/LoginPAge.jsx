@@ -7,6 +7,8 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import useUserContext from '../UserContext';
+import image01 from '../../assets/image01.png'
+import image02 from '../../assets/image02.png'
 
 
 function LoginPage() {
@@ -162,7 +164,7 @@ function LoginPage() {
               Sign In
               </button>
           </div>
-          <img src="image01.png" class="image" alt="" />
+          <img src={image01} class="image" alt="" />
         </div>
         <div className="panel right-panel">
           <div className="content">
@@ -175,7 +177,7 @@ function LoginPage() {
               Sign in
             </button>
           </div>
-          <img src="image02.png" class="image" alt="" />
+          <img src={image02} class="image" alt="" />
         </div>
       </div>
     </div>

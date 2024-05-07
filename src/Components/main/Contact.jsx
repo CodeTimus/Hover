@@ -4,6 +4,7 @@ import {useFormik} from 'formik'
 // import './Contact.css'
 // import {enqueueSnackbar} from 'notistack'
 // import * as yup from 'yup'
+import contactpng from '../../assets/contactpng.png'
 
 const Contact = () => {
   const ContactForm = useFormik({
@@ -148,7 +149,7 @@ const Contact = () => {
           />
         </form>
         <div>
-          <img src="contact-png.png" alt="" />
+          <img src={contactpng} alt="" />
         </div>
       </div>
     </div>
