@@ -1,35 +1,119 @@
-.section__container{
-    background-color: rgb(194, 194, 194);
+.section__container {
+  background-color: white
 }
-.about__container h2{
-    color: black;
-    font-size: 50px;
+
+.about__container h2 {
+  color: black;
+  font-size: 50px;
   margin-top: 40px;
   margin-left: 40px;
   margin-bottom: 30px;
 }
+
 .about__container {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 25rem;
-    align-items: center;
-  }
-  
-  .about__content p {
-    /* top: 50px; */
-   margin-left: 42px;
-    /* font-weight:bold; */
-    font-size: 20px;
-    color:black;
-  }
-  
-  .about__image img {
-    max-width: 400px;
-    margin: auto;
-    border-radius: 10px;
-  }
-  
-  /* body{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 25rem;
+  align-items: center;
+}
+
+.about__content p {
+  /* top: 50px; */
+  margin-left: 42px;
+  /* font-weight:bold; */
+  font-size: 20px;
+  color: black;
+}
+
+.about__image img {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* body{
     background-color: #2ec8a6;
    */
-   /* end */
+/* end */
+
+.why-chose-us {
+  padding: 2rem 7%;
+  background-color: white;
+}
+
+.why-chose-us h1 {
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  padding: 2rem;
+}
+
+.why-chose-us h1 span {
+  color: blue
+}
+
+.full-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-choseus {
+  flex: 1 1 300px;
+}
+
+.main-choseus img {
+  width: 95%;
+}
+
+.chose-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.chose-img img {
+  width: 100px;
+}
+
+.chose-img p {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.our-gallery {
+  padding: 2rem 7%;
+  /* background: var(--otherclr); */
+  background-color: aquamarine;
+}
+
+.our-gallery h1 {
+  font-size: 40px;
+  text-align: center;
+  color: blue
+}
+
+.our-gallery h1 span {
+  color: black
+}
+
+.main-gallery {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.inner-gallery {
+  flex: 1 1 300px;
+}
+
+.inner-gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}

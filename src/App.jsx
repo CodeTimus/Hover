@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import About from './Components/main/About.jsx'
 import "./App.css"
 import Signup from './Components/main/Signup.jsx'
 import Home from './Components/main/Home.jsx'
@@ -28,6 +27,7 @@ import DocProfile from './Components/main/DocProfile.jsx'
 import AdminDashboard from './Components/Admin/AdminDashboard.jsx'
 import ProfileCard from './Components/main/ProfileCard.jsx'
 import ForgetPassword from './Components/main/ForgetPassword.jsx'
+import About from './Components/main/About.jsx'
 
 // import Navbar from './Components/main/Navbar.jsx'
 
@@ -41,7 +41,6 @@ const App = () => {
             <Routes>
               <Route path='/' element={<Navigate to={"/main/home"} />} />
               <Route path='main' element={<Main />}>
-                <Route path="About" element={<About />} />
                 <Route path="Login" element={<Login />} />
                 <Route path="Signup" element={<Signup />} />
                 <Route path="Home" element={<Home />} />
@@ -54,6 +53,7 @@ const App = () => {
                 <Route path="ProfileCard" element={<ProfileCard />} />
                 <Route path="DocProfile/:id" element={<DocProfile />} />
                 <Route path="ForgetPassword" element={<ForgetPassword />} />
+                <Route path="About" element={<About />} />
               </Route>
 
 

@@ -279,7 +279,7 @@ html {
     line-height: 2.5rem;
     padding: 1rem 0;
 }
-
+/* 
 .main-doctors {
     padding: 5rem 9%;
     background-image: url(assets/backgroung-pattern-3.png);
@@ -401,8 +401,101 @@ html {
 
 .doc-poster:hover .doc-details {
     bottom: 10px;
-}
+} */
 
+/* doctorlist */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* body {
+  background-color: #f5f5f5;
+} */
+.row98 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  text-align: center;
+}
+.column98 {
+  width: 100%;
+  padding: 0.5em 0;
+}
+.row98 h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  color: #1f003b;
+}
+.card98 {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 3.5em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+.card98 .img-container98 {
+  width: 8em;
+  height: 8em;
+  background-color: #a993ff;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+.card98 img {
+  width: 100%;
+  border-radius: 50%;
+}
+/* .card98 .column98 h3 {
+  font-weight: 100;
+} */
+.card98 p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+}
+.icons98 {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card98 a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+.card98:hover {
+  background: linear-gradient(#6045ea, #8567f7);
+  color: #ffffff;
+}
+.card98:hover .img-container98 {
+  transform: scale(1.15);
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+  .card98 {
+    padding: 5em 1em;
+  }
+  .column98 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+}
 
 .our-service {
     width: 100%;
@@ -563,7 +656,32 @@ html {
 }
 
 /* -------------------------------------------------------------------- */
+/* banner------------------ */
 
+.banner-one{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 176, 49, 0.9)), to(rgba(27, 230, 78, 0.85))), url('assets/banner-1-img.png') top/cover no-repeat;
+  background: -o-linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('assets/banner-1-img.png') top/cover no-repeat;
+  background: linear-gradient(rgba(176, 224, 184, 0.9), hsla(134, 54%, 61%, 0.85)), url('assets/banner-1-img.png') top/cover no-repeat;
+  height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banner-one .lead{
+  font-size: 2.8rem;
+  font-weight: 500;
+  /* max-width: 600px; */
+  padding-left: 10px;
+}
+.banner-one .text-sm{
+  font-weight: 500;
+}
 /* <----Login style----> */
 
 /* *{

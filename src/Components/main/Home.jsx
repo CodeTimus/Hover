@@ -6,6 +6,10 @@ import team2 from '../../assets/team2.jpg'
 import pic1 from '../../assets/pic1.jpg'
 import pic2 from '../../assets/pic2.jpg'
 import pic3 from '../../assets/pic3.jpg'
+import profile1 from '../../assets/profile1.png'
+import profile2 from '../../assets/profile2.jpg'
+import profile3 from '../../assets/profile3.jpg'
+import footerlogo from '../../assets/footerlogo.png'
 // import "./areeba.css"
 // import './Home.css'
 
@@ -141,93 +145,103 @@ const Home = () => {
       </div>
     </div>
   </div> */}
+  <>
+  {/* bANNER */}
+  <section id="banner-one" className="banner-one text-center">
+    <div className="container text-white">
+      <blockquote className="lead">
+        <i className="fas fa-quote-left" /> When you are young and healthy, it
+        never occurs to you that in a single second your whole life could
+        change. <i className="fas fa-quote-right" />
+      </blockquote>
+      <small className="text text-sm">- Anonim Nano</small>
+    </div>
+  </section>
+{/* bANNER */}
+</>
+
         {/* About us section ends */}
         {/* our doctors */}
-        <div className="main-doctors">
-          <div className="doctors-heading">
-            <h2>Our Doctors</h2>
-          </div>
-          <div className="main-inner-doctor">
-            <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src={team1} alt="" />
-              <div className="doc-details">
-                <h2>Dr.Awasthi</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div>
-            <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src={team2} alt="" />
-              <div className="doc-details">
-                <h2>Dr.bhatiya</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div>
-            {/* <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src="images/team3.jpg" alt="" />
-              <div className="doc-details">
-                <h2>Dr.Patel</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div>
-            <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src="images/team4.jpg" alt="" />
-              <div className="doc-details">
-                <h2>Dr.Sinha</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div>
-            <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src="images/team5.jpg" alt="" />
-              <div className="doc-details">
-                <h2>Dr.Agarwal</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div>
-            <div className="doc-poster">
-              <div className="doc-icons">
-                <i className="fa-solid fa-share" />
-                <i className="fa-solid fa-eye" />
-                <i className="fa-solid fa-heart" />
-              </div>
-              <img src="images/team6.jpg" alt="" />
-              <div className="doc-details">
-                <h2>Dr.Jain</h2>
-                <i className="fa-brands fa-linkedin" />
-                <i className="fa-brands fa-instagram" />
-              </div>
-            </div> */}
-          </div>
+        <section>
+  <div className="row98">
+    <h1>Medical Experts</h1>
+  </div>
+  <div className="row98">
+    {/* Column 1*/}
+    <div className="column98">
+      <div className="card98">
+        <div className="img-container98">
+          <img src={profile1} />
         </div>
+        <h3>Dr.Aarohi</h3>
+        <p>Neurosciences</p>
+        <div className="icons98">
+          <a href="#">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="#">
+            <i className="fab fa-linkedin" />
+          </a>
+          <a href="#">
+            <i className="fab fa-github" />
+          </a>
+          <a href="#">
+            <i className="fas fa-envelope" />
+          </a>
+        </div>
+      </div>
+    </div>
+    {/* Column 2*/}
+    <div className="column98">
+      <div className="card98">
+        <div className="img-container98">
+          <img src={profile2} />
+        </div>
+        <h3>Dr.Ritika</h3>
+        <p>Cardiac Care</p>
+        <div className="icons98">
+          <a href="#">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="#">
+            <i className="fab fa-linkedin" />
+          </a>
+          <a href="#">
+            <i className="fab fa-github" />
+          </a>
+          <a href="#">
+            <i className="fas fa-envelope" />
+          </a>
+        </div>
+      </div>
+    </div>
+    {/* Column 3*/}
+    <div className="column98">
+      <div className="card98">
+        <div className="img-container98">
+          <img src={profile3} />
+        </div>
+        <h3>Dr Pradeep </h3>
+        <p>CPR Specialist</p>
+        <div className="icons98">
+          <a href="#">
+            <i className="fab fa-twitter" />
+          </a>
+          <a href="#">
+            <i className="fab fa-linkedin" />
+          </a>
+          <a href="#">
+            <i className="fab fa-github" />
+          </a>
+          <a href="#">
+            <i className="fas fa-envelope" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         {/* new One */}
 
         {/* <section class="section__container service__container">
@@ -438,7 +452,7 @@ const Home = () => {
         <div className="footer-about">
           <div className="footer-logo">
             <a href="#">
-              <img src="img/footer-logo.png" alt="" />
+              <img src={footerlogo} alt="" />
             </a>
           </div>
           <p>
@@ -452,19 +466,19 @@ const Home = () => {
       </div>
       <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
         <div className="footer-widget">
-          <h6>Shopping</h6>
+          <h6>Specialities</h6>
           <ul>
             <li>
-              <a href="#">Clothing Store</a>
+              <a href="#">Cardiac Care</a>
             </li>
             <li>
-              <a href="#">Trending Shoes</a>
+              <a href="#">Orthopaedics</a>
             </li>
             <li>
-              <a href="#">Accessories</a>
+              <a href="#">Emergency</a>
             </li>
             <li>
-              <a href="#">Sale</a>
+              <a href="#">ENT, Head and Neck Specialist</a>
             </li>
           </ul>
         </div>
@@ -477,13 +491,13 @@ const Home = () => {
               <a href="#">Contact Us</a>
             </li>
             <li>
-              <a href="#">Payment Methods</a>
+              <a href="#">Find a Doctor</a>
             </li>
             <li>
-              <a href="#">Delivary</a>
+              <a href="#">Book Appointment</a>
             </li>
             <li>
-              <a href="#">Return &amp; Exchanges</a>
+              <a href="#">CPR &amp; CPR</a>
             </li>
           </ul>
         </div>

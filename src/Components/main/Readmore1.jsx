@@ -1,5 +1,14 @@
 import React from 'react'
 import './Readmore1.css'
+import about from'../../assets/about.jpg'
+import virus from'../../assets/virus.png'
+import doctorstand from'../../assets/doctorstand.png'
+import gallery4 from'../../assets/gallery4.jpg'
+import gallery3 from'../../assets/gallery3.jpg'
+import gallery2 from'../../assets/gallery2.jpg'
+import gallery1 from'../../assets/gallery1.jpg'
+import gallery5 from'../../assets/gallery5.jpg'
+import gallery6 from'../../assets/gallery6.jpg'
 
 const Readmore1 = () => {
   return (
@@ -35,12 +44,93 @@ const Readmore1 = () => {
         to significant improvements in your quality of life, and we're here to
         guide you on your path to a healthier and happier you.
       </p>
+      
     </div>
+    
     <div className="about__image">
-    <img src="images/about.jpg" alt="" />
+    <img src={about} alt="" />
     </div>
   </section>
     </body>
+</>
+<>
+  {/* why chose us */}
+  <div className="why-chose-us">
+    <h1>
+      Why <span>chose</span> us
+    </h1>
+    <div className="full-main">
+      <div className="main-choseus">
+        <div className="main-inner-chose">
+          <div className="chose-img">
+            <img src={virus} alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              impedit voluptates quod?{" "}
+            </p>
+          </div>
+        </div>
+        <div className="main-inner-chose">
+          <div className="chose-img">
+            <img src={virus} alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              impedit voluptates quod?{" "}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="main-choseus">
+        <img src={doctorstand} alt="" />
+      </div>
+      <div className="main-choseus">
+        <div className="main-inner-chose">
+          <div className="chose-img">
+            <img src={virus} alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              impedit voluptates quod?{" "}
+            </p>
+          </div>
+        </div>
+        <div className="main-inner-chose">
+          <div className="chose-img">
+            <img src={virus} alt="" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              impedit voluptates quod?{" "}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* our gallery */}
+  <div className="our-gallery">
+    <h1>
+      Our <span>Gallery</span>
+    </h1>
+    <div className="main-gallery">
+      <div className="inner-gallery">
+        <img src={gallery1} alt="" />
+      </div>
+      <div className="inner-gallery">
+        <img src={gallery2} alt="" />
+      </div>
+      <div className="inner-gallery">
+        <img src={gallery3} alt="" />
+      </div>
+      <div className="inner-gallery">
+        <img src={gallery4} alt="" />
+      </div>
+      <div className="inner-gallery">
+        <img src={gallery5} alt="" />
+      </div>
+      <div className="inner-gallery">
+        <img src={gallery6} alt="" />
+      </div>
+    </div>
+  </div>
 </>
 
     </div>
