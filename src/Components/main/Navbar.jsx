@@ -56,6 +56,8 @@ const Navbar = () => {
         </Link>
         
         
+        
+        
         {/* <Link
           className="nav-link disabled"
           to="#"
@@ -66,8 +68,29 @@ const Navbar = () => {
         </Link> */}
       </div>
     </div>
+    <>
+  <div className="icon-box">
+    <i className="far fa-envelope" />
   </div>
+  <strong >Email</strong>
+  <br />
+  <a href="mailto:info@medic.com">
+    <span style={{ whiteSpace: 'pre-wrap' }}>EMS@medic.com </span>
+  </a>
+  <li className="item text-left">
+    <div className="icon-box">
+      <i className="fas fa-phone" />
+    </div>
+    <strong>Call Now</strong>
+    <br />
+    <span>+ (88017) - 123 - 4567</span>
+  </li>
+</>
+
+  </div>
+  
 </nav>
+
 
     </div>
   )

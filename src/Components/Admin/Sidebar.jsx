@@ -54,7 +54,7 @@ const Sidebar = () => {
       </div>
       <ul className="sidebar-list">
         <li className="sidebar-list-item">
-          <Link to="/admin/AdminDashboard">
+          <Link to="/Admin/AdminDashboard">
             <span className="material-icons-outlined">dashboard</span> Dashboard
           </Link>
         </li>
