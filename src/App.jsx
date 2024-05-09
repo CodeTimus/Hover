@@ -27,7 +27,8 @@ import DocProfile from './Components/main/DocProfile.jsx'
 import AdminDashboard from './Components/Admin/AdminDashboard.jsx'
 import ProfileCard from './Components/main/ProfileCard.jsx'
 import ForgetPassword from './Components/main/ForgetPassword.jsx'
-import About from './Components/main/About.jsx'
+import AServices from './Components/main/AServices.jsx'
+
 
 // import Navbar from './Components/main/Navbar.jsx'
 
@@ -53,7 +54,9 @@ const App = () => {
                 <Route path="ProfileCard" element={<ProfileCard />} />
                 <Route path="DocProfile/:id" element={<DocProfile />} />
                 <Route path="ForgetPassword" element={<ForgetPassword />} />
-                <Route path="About" element={<About />} />
+                <Route path="AServices" element={<AServices />} />
+               
+               
               </Route>
 
 
