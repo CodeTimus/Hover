@@ -1,104 +1,87 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import "./Sidebar.css"
+import { Link } from 'react-router-dom'
+import './Sidebar.css'
+
 
 const Sidebar = () => {
+
   return (
-    <div>
-      <>
-  <meta charSet="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Admin Dashboard</title>
-  {/* Open Sans Font */}
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-  {/* Material Icons */}
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-    rel="stylesheet"
-  />
-  {/* Bootstrap Icons */}
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-  />
-  {/* Custom CSS */}
-  <link rel="stylesheet" href="css/styles.css" />
-  <div className="grid-container">
-    {/* Header */}
-    <header className="header">
-      <div className="menu-icon" onclick="openSidebar()">
-        <span className="material-icons-outlined">menu</span>
-      </div>
-      <div className="header-left">
-        <span className="material-icons-outlined">search</span>
-      </div>
-      <div className="header-right">
-        <span className="material-icons-outlined">notifications</span>
-        <span className="material-icons-outlined">email</span>
-        <span className="material-icons-outlined">account_circle</span>
-      </div>
-    </header>
-    {/* End Header */}
-    {/* Sidebar */}
-    <aside id="sidebar">
-      <div className="sidebar-title">
-        <div className="sidebar-brand">
-          <span className="material-icons-outlined">mood</span> LOGO
+    <>
+   
+   <>
+  <div className="sidebar">
+    <div className="logo-details">
+      <i className="bx bxl-c-plus-plus icon" />
+      <div className="logo_name">Mitti Mahal</div>
+      <i className=" bx bx-menu" id="btn"  />
+    </div>
+    <ul className="nav-list">
+        <li>
+        <Link to="/admin/AdminDashboard">
+          <i className="bx bx-grid-alt" />
+          <span className="links_name">Admin Dashboard</span>
+        </Link>
+        <span className="tooltip">Admin Dashboard</span>
+      </li>
+      <li>
+        <Link to="/Admin/ManageUser">
+          <i className="bx bx-user" />
+          <span className="links_name">Manage User</span>
+        </Link>
+        <span className="tooltip">Manage User</span>
+      </li>
+      <li>
+        <Link to="/Admin/AddProduct">
+          <i className="bx bxs-cart-add" />
+          <span className="links_name">Add Product</span>
+        </Link>
+        <span className="tooltip">Add Product</span>
+      </li>
+      <li>
+        <Link to="/Admin/ManageProduct">
+          <i className="bx bx-pie-chart-alt-2" /> 
+          <span className="links_name">Manage Product</span>
+        </Link>
+        <span className="tooltip">Manage Product</span>
+      </li>
+
+      <li>
+        <Link to="/Admin/ManageOrder">
+          <i className="bx bx-cart-alt" />
+          <span className="links_name">Manage Order</span>
+        </Link>
+        <span className="tooltip">Manage Order</span>
+      </li>
+   
+      <li>
+        <a href="#">
+          <i className="bx bx-cog" />
+          <span className="links_name">Setting</span>
+        </a>
+        <span className="tooltip">Setting</span>
+      </li>
+      <li className="profile">
+        <div className="profile-details">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png"
+            alt="profileImg"
+          />
+          <div className="name_job">
+            <div className="name">Stella Army</div>
+            <div className="job">Web designer</div>
+          </div>
         </div>
-        <span className="material-icons-outlined" onclick="closeSidebar()">
-          close
-        </span>
-      </div>
-      <ul className="sidebar-list">
-        <li className="sidebar-list-item">
-          <Link to="/Admin/AdminDashboard">
-            <span className="material-icons-outlined">dashboard</span> Dashboard
-          </Link>
-        </li>
-        <li className="sidebar-list-item">
-          <Link to="/admin/AddDoctor">
-            <span className="material-icons-outlined">Add Doctor</span>{" "}
-            LAdd Doctor
-          </Link>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="#">
-            <span className="material-icons-outlined">forum</span> Forum
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="#">
-            <span className="material-icons-outlined">phone</span> Support
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="#">
-            <span className="material-icons-outlined">email</span> Messages
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="#">
-            <span className="material-icons-outlined">poll</span> Reports
-          </a>
-        </li>
-        <li className="sidebar-list-item">
-          <a href="#">
-            <span className="material-icons-outlined">settings</span> Settings
-          </a>
-        </li>
-      </ul>
-    </aside>
-    {/* End Sidebar */}
-    
+        <i className="bx bx-log-out" id="log_out" />
+      </li>
+    </ul>
   </div>
-  {/* Scripts */}
-  {/* Custom JS */}
+  {/* <section className="home-section">
+    <div className="text">Hello</div>
+  </section> */}
 </>
 
-    </div>
+  </>
+  
   )
 }
 
