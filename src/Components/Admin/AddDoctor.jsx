@@ -12,23 +12,25 @@ const AddDoctor = () => {
 
   const navigate = useNavigate();
 
-  const [selProject, setSelProject] = useState("");
+  const [selFile, setSelFile] = useState("");
+  const [certificate1File, setCertificate1File] = useState("");
+  const [certificate2File, setCertificate2File] = useState("");
 
 
   const addProjectForm = useFormik({
     initialValues: {
       name: '',
-      email:'',
-      password:'',
-      contact:'',  
+      email: '',
+      password: '',
+      contact: '',
       latitude: '',
       longitude: '',
       speciality: '',
       image: '',
-      cer1:'',
-      cer2:'',
-      desc:'',
-      avatar:'',
+      cer1: '',
+      cer2: '',
+      desc: '',
+      avatar: '',
       createdAt: new Date(),
     },
     onSubmit: async (values, action) => {
@@ -74,7 +76,9 @@ const AddDoctor = () => {
   const uploadFile = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    setSelProject(file.name);
+    setSelFile(file.name);
+    setCertificate1File(file.name);
+    setCertificate2File(file.name)
     const fd = new FormData();
     fd.append("myfile", file);
     fetch("http://localhost:3000/util/uploadfile", {
@@ -86,13 +90,13 @@ const AddDoctor = () => {
       }
     });
   };
-  const uploadDegree = (e) => {
+  const certificateFile = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    setSelProject(file.name);
+    setCertificate1File(file.name);
     const fd = new FormData();
     fd.append("myfile", file);
-    fetch("http://localhost:3000/util/uploadfile", {
+    fetch("http://localhost:3000/util/certificateFile", {
       method: "POST",
       body: fd,
     }).then((res) => {
@@ -101,13 +105,15 @@ const AddDoctor = () => {
       }
     });
   };
-  const uploadCertificate = (e) => {
+
+
+  const certificateFile2 = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    setSelProject(file.name);
+    setCertificate2File(file.name);
     const fd = new FormData();
     fd.append("myfile", file);
-    fetch("http://localhost:3000/util/uploadfile", {
+    fetch("http://localhost:3000/util/certificateFile2", {
       method: "POST",
       body: fd,
     }).then((res) => {
@@ -235,7 +241,7 @@ const AddDoctor = () => {
               <input
                 type="file" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input"
-                onChange={uploadDegree}
+                onChange={certificateFile}
               />
             </div>
             <div className="form-outline">
@@ -245,7 +251,7 @@ const AddDoctor = () => {
               <input
                 type="file" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input"
-                onChange={uploadCertificate}
+                onChange={certificateFile2}
               />
             </div>
 
