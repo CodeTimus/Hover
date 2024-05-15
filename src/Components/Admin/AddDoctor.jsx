@@ -34,7 +34,7 @@ const AddDoctor = () => {
       createdAt: new Date(),
     },
     onSubmit: async (values, action) => {
-      values.image = selProject;
+      values.image = selFile;
       console.log(values);
 
 

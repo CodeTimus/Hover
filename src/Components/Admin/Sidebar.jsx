@@ -12,7 +12,7 @@ const Sidebar = () => {
   <div className="sidebar">
     <div className="logo-details">
       <i className="bx bxl-c-plus-plus icon" />
-      <div className="logo_name">Mitti Mahal</div>
+      <div className="logo_name">EDS</div>
       <i className=" bx bx-menu" id="btn"  />
     </div>
     <ul className="nav-list">
@@ -31,7 +31,7 @@ const Sidebar = () => {
         <span className="tooltip">Manage User</span>
       </li>
       <li>
-        <Link to="/Admin/AddProduct">
+        <Link to="/Admin/AddDoctor">
           <i className="bx bxs-cart-add" />
           <span className="links_name">Add Product</span>
         </Link>
