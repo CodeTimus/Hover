@@ -75,14 +75,13 @@ const Sidebar = ({ children }) => {
             </li>
           </ul>
         </div>
-        {/* <section className="home-section">
-     <div className="text">Hello</div>
-   </section> */}
+        <section className="home-section">
+          {children}
+        </section>
       </>
 
     </>
   )
-  { children }
 }
 {/* <section className="home-section">
     <div className="text">Hello</div>
