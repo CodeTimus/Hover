@@ -10,8 +10,6 @@ import profile1 from '../../assets/profile1.png'
 import profile2 from '../../assets/profile2.jpg'
 import profile3 from '../../assets/profile3.jpg'
 import footerlogo from '../../assets/footerlogo.png'
-// import "./areeba.css"
-// import './Home.css'
 
 const Home = () => {
   return (
@@ -49,7 +47,7 @@ const Home = () => {
         <div className="main-home">
           <div className="home">
             <div className="home-left-content">
-              <span>welcome to Emergency Doctor Services</span>
+              <span>Welcome to Emergency Doctor Services</span>
               <h2>
                 We take care our
                 <br /> Patients Healths
