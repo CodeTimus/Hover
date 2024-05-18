@@ -1,3 +1,5 @@
+![image](https://github.com/CodeTimus/Hover/assets/141570316/d246413b-c9ca-436d-b748-272d71851c06)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
