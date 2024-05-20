@@ -35,6 +35,8 @@ const AddDoctor = () => {
     },
     onSubmit: async (values, action) => {
       values.image = selFile;
+      values.cer1 = certificate1File;
+      values.cer2 = certificate2File;
       console.log(values);
 
 

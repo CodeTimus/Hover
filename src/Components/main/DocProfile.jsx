@@ -46,7 +46,7 @@ const DocProfile = () => {
 
   const selectDoctor = (currentDoctor) => {
     setSelDoc(currentDoctor);
-    if (currentDoctor.notiToken){
+    if (currentDoctor.notiToken) {
       console.log('notification sent');
       sendNotification(currentDoctor.notiToken);
     }

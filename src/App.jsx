@@ -28,6 +28,8 @@ import AdminDashboard from './Components/Admin/AdminDashboard.jsx'
 import ProfileCard from './Components/main/ProfileCard.jsx'
 import ForgetPassword from './Components/main/ForgetPassword.jsx'
 import AServices from './Components/main/AServices.jsx'
+import AdminAuth from './AdminAuth.jsx'
+import UserAuth from './UserAuth.jsx'
 
 
 // import Navbar from './Components/main/Navbar.jsx'
@@ -52,7 +54,7 @@ const App = () => {
                 <Route path="DoctorProfile/:id" element={<DoctorProfile />} />
                 <Route path="Location" element={<Location />} />
                 <Route path="ProfileCard" element={<ProfileCard />} />
-                <Route path="DocProfile/:id" element={<DocProfile />} />
+                <Route path="DocProfile/:id" element={<UserAuth><DocProfile /></UserAuth>} />
                 <Route path="ForgetPassword" element={<ForgetPassword />} />
                 <Route path="AServices" element={<AServices />} />
                
@@ -65,7 +67,7 @@ const App = () => {
               <Route path="/*" element={<Notfound />} />
               <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
 
-              <Route path="/Admin" element={<Admin />} >
+              <Route path="/Admin" element={<AdminAuth><Admin /></AdminAuth>} >
                 <Route path="AdminDashboard" element={<AdminDashboard />} />
                 <Route path="AddDoctor" element={<AddDoctor />} />
                 <Route path="ManageUser" element={<ManageUser />} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import image1 from '../../assets/hero2.png'
 import team1 from '../../assets/team1.jpg'
@@ -10,10 +10,35 @@ import profile1 from '../../assets/profile1.png'
 import profile2 from '../../assets/profile2.jpg'
 import profile3 from '../../assets/profile3.jpg'
 import footerlogo from '../../assets/footerlogo.png'
+import { enqueueSnackbar } from 'notistack'
+import {ReactTyped} from "react-typed";
+
 
 const Home = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShowDisclaimer(true);
+      enqueueSnackbar('This website is for informational purposes only. The content should not be considered professional advice.', {
+        variant: 'info',
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'center',
+        },
+        autoHideDuration: 6000, // 6 seconds
+        contentStyle: {
+          fontSize: '30px !important', // Adjust font size as needed
+        },
+      });
+    }, 5000); // 30 seconds in milliseconds
+
+    return () => clearTimeout(timeoutId); // Cleanup function to clear timeout on unmount
+  }, []);
+
   return (
     <div>
+      
       <>
         <title>Emergency Doctor Services</title>
         <link
@@ -25,29 +50,13 @@ const Home = () => {
           href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
         />
         <link rel="stylesheet" href=".css" />
-        {/* <header>
-    <div className="logo">
-      <img src="images/logo3.png" alt="" />
-    </div>
-    <nav className="navbar">
-      <a href="#Home">Home</a>
-      <a href="#Home">About</a>
-      <a href="#Home">Service</a>
-      <a href="#Home">Contact</a>
-      <a href="#Home">Login</a>
-      <a href="#Home">Signup</a>
-    </nav>
-    <div className="right-icons">
-      <div id="menu-bars" className="fas fa-bars" />
-      <div className="btn">Make Appointment</div>
-    </div>
-  </header> */}
-        {/* header section ended */}
+
         {/* Home section started */}
         <div className="main-home">
           <div className="home">
             <div className="home-left-content">
-              <span>Welcome to Emergency Doctor Services</span>
+              <span>Welcome to </span>
+              <ReactTyped style={{fontSize:"30px"}} className=" " strings={["Emergency Doctor Services"]} typeSpeed={100} loop />
               <h2>
                 We take care our
                 <br /> Patients Healths
@@ -143,102 +152,102 @@ const Home = () => {
       </div>
     </div>
   </div> */}
-  <>
-  {/* bANNER */}
-  <section id="banner-one" className="banner-one text-center">
-    <div className="container text-white">
-      <blockquote className="lead">
-        <i className="fas fa-quote-left" /> When you are young and healthy, it
-        never occurs to you that in a single second your whole life could
-        change. <i className="fas fa-quote-right" />
-      </blockquote>
-      <small className="text text-sm">- Anonim Nano</small>
-    </div>
-  </section>
-{/* bANNER */}
-</>
+        <>
+          {/* bANNER */}
+          <section id="banner-one" className="banner-one text-center">
+            <div className="container text-white">
+              <blockquote className="lead">
+                <i className="fas fa-quote-left" /> When you are young and healthy, it
+                never occurs to you that in a single second your whole life could
+                change. <i className="fas fa-quote-right" />
+              </blockquote>
+              <small className="text text-sm">- Anonim Nano</small>
+            </div>
+          </section>
+          {/* bANNER */}
+        </>
 
         {/* About us section ends */}
         {/* our doctors */}
         <section>
-  <div className="row98">
-    <h1>Medical Experts</h1>
-  </div>
-  <div className="row98">
-    {/* Column 1*/}
-    <div className="column98">
-      <div className="card98">
-        <div className="img-container98">
-          <img src={profile1} />
-        </div>
-        <h3>Dr.Aarohi</h3>
-        <p>Neurosciences</p>
-        <div className="icons98">
-          <a href="#">
-            <i className="fab fa-twitter" />
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin" />
-          </a>
-          <a href="#">
-            <i className="fab fa-github" />
-          </a>
-          <a href="#">
-            <i className="fas fa-envelope" />
-          </a>
-        </div>
-      </div>
-    </div>
-    {/* Column 2*/}
-    <div className="column98">
-      <div className="card98">
-        <div className="img-container98">
-          <img src={profile2} />
-        </div>
-        <h3>Dr.Ritika</h3>
-        <p>Cardiac Care</p>
-        <div className="icons98">
-          <a href="#">
-            <i className="fab fa-twitter" />
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin" />
-          </a>
-          <a href="#">
-            <i className="fab fa-github" />
-          </a>
-          <a href="#">
-            <i className="fas fa-envelope" />
-          </a>
-        </div>
-      </div>
-    </div>
-    {/* Column 3*/}
-    <div className="column98">
-      <div className="card98">
-        <div className="img-container98">
-          <img src={profile3} />
-        </div>
-        <h3>Dr Pradeep </h3>
-        <p>CPR Specialist</p>
-        <div className="icons98">
-          <a href="#">
-            <i className="fab fa-twitter" />
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin" />
-          </a>
-          <a href="#">
-            <i className="fab fa-github" />
-          </a>
-          <a href="#">
-            <i className="fas fa-envelope" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="row98">
+            <h1>Medical Experts</h1>
+          </div>
+          <div className="row98">
+            {/* Column 1*/}
+            <div className="column98">
+              <div className="card98">
+                <div className="img-container98">
+                  <img src={profile1} />
+                </div>
+                <h3>Dr.Aarohi</h3>
+                <p>Neurosciences</p>
+                <div className="icons98">
+                  <a href="#">
+                    <i className="fab fa-twitter" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-github" />
+                  </a>
+                  <a href="#">
+                    <i className="fas fa-envelope" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Column 2*/}
+            <div className="column98">
+              <div className="card98">
+                <div className="img-container98">
+                  <img src={profile2} />
+                </div>
+                <h3>Dr.Ritika</h3>
+                <p>Cardiac Care</p>
+                <div className="icons98">
+                  <a href="#">
+                    <i className="fab fa-twitter" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-github" />
+                  </a>
+                  <a href="#">
+                    <i className="fas fa-envelope" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Column 3*/}
+            <div className="column98">
+              <div className="card98">
+                <div className="img-container98">
+                  <img src={profile3} />
+                </div>
+                <h3>Dr Pradeep </h3>
+                <p>CPR Specialist</p>
+                <div className="icons98">
+                  <a href="#">
+                    <i className="fab fa-twitter" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin" />
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-github" />
+                  </a>
+                  <a href="#">
+                    <i className="fas fa-envelope" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* new One */}
 
@@ -418,7 +427,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="review-box">
-                  <img src={pic3}alt="" />
+                  <img src={pic3} alt="" />
                   <h2>Irshad Ansari</h2>
                   <div className="review-stars">
                     <i className="fa-solid fa-star" />
@@ -444,95 +453,95 @@ const Home = () => {
         {/* customer review */}
         {/* footer */}
         <footer className="footer">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-3 col-md-6 col-sm-6">
-        <div className="footer-about">
-          <div className="footer-logo">
-            <a href="#">
-              <img src={footerlogo} alt="" />
-            </a>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-sm-6">
+                <div className="footer-about">
+                  <div className="footer-logo">
+                    <a href="#">
+                      <img src={footerlogo} alt="" />
+                    </a>
+                  </div>
+                  <p>
+                    The Customer is at the heart of our unique bussiness model, which
+                    include design.
+                  </p>
+                  <a href="#">
+                    <img src="img/payment.png" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                <div className="footer-widget">
+                  <h6>Specialities</h6>
+                  <ul>
+                    <li>
+                      <a href="#">Cardiac Care</a>
+                    </li>
+                    <li>
+                      <a href="#">Orthopaedics</a>
+                    </li>
+                    <li>
+                      <a href="#">Emergency</a>
+                    </li>
+                    <li>
+                      <a href="#">ENT, Head and Neck Specialist</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-2  col-md-3 col-sm-6">
+                <div className="footer-widget">
+                  <h6>Links</h6>
+                  <ul>
+                    <li>
+                      <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="#">Find a Doctor</a>
+                    </li>
+                    <li>
+                      <a href="#">Book Appointment</a>
+                    </li>
+                    <li>
+                      <a href="#">CPR &amp; CPR</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                <div className="footer-widget">
+                  <h6>NewsLetter</h6>
+                  <div className="footer-newslatter">
+                    <p>
+                      Be the first to know about new arrivals, look books, sales &amp;
+                      promos!
+                    </p>
+                    <form action="#">
+                      <input type="text" placeholder="Your Email" />
+                      <button type="submit">
+                        <span>
+                          <i className="fa fa-envelope" arial-hidden="true" />
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <div className="footer-copyright-text">
+                  <p>
+                    Copyright © 2024 All rights reserved | This template is made with{" "}
+                    <i className="fa fa-heart-o" arial-hidden="true" />
+                    by <a href="#">CodingWithkumar</a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p>
-            The Customer is at the heart of our unique bussiness model, which
-            include design.
-          </p>
-          <a href="#">
-            <img src="img/payment.png" alt="" />
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-        <div className="footer-widget">
-          <h6>Specialities</h6>
-          <ul>
-            <li>
-              <a href="#">Cardiac Care</a>
-            </li>
-            <li>
-              <a href="#">Orthopaedics</a>
-            </li>
-            <li>
-              <a href="#">Emergency</a>
-            </li>
-            <li>
-              <a href="#">ENT, Head and Neck Specialist</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-lg-2  col-md-3 col-sm-6">
-        <div className="footer-widget">
-          <h6>Links</h6>
-          <ul>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li>
-              <a href="#">Find a Doctor</a>
-            </li>
-            <li>
-              <a href="#">Book Appointment</a>
-            </li>
-            <li>
-              <a href="#">CPR &amp; CPR</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-        <div className="footer-widget">
-          <h6>NewsLetter</h6>
-          <div className="footer-newslatter">
-            <p>
-              Be the first to know about new arrivals, look books, sales &amp;
-              promos!
-            </p>
-            <form action="#">
-              <input type="text" placeholder="Your Email" />
-              <button type="submit">
-                <span>
-                  <i className="fa fa-envelope" arial-hidden="true" />
-                </span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-lg-12 text-center">
-        <div className="footer-copyright-text">
-          <p>
-            Copyright © 2024 All rights reserved | This template is made with{" "}
-            <i className="fa fa-heart-o" arial-hidden="true" />
-            by <a href="#">CodingWithkumar</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+        </footer>
 
         {/* footer ended */}
       </>
