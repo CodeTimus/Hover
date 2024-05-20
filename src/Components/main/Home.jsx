@@ -451,6 +451,19 @@ const Home = () => {
           </section>
         </div>
         {/* customer review */}
+        {/* */}
+        <div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Write a Review</h5>
+    <p class="card-text">Your review will help us improve and make it user friendly for more users.</p>
+    < a href="/main/Feedback" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here!</a>
+    
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
         {/* footer */}
         <footer className="footer">
           <div className="container">
