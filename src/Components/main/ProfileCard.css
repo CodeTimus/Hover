@@ -18,7 +18,7 @@
   }
   .profile-box88 {
     width: 20pc;
-    height: 30pc;
+    height: 22pc;
     border-radius: 20px 20px 20px 0;
     margin-left: auto;
     margin-right: auto;
@@ -40,7 +40,7 @@
   .profile-img88 img {
     border-radius: 100%;
     border: 2px solid #f0f0f0;
-    width: 70%;
+    width: 40%;
     height: 150%;
     margin-top: 30px;;
   }
@@ -99,4 +99,12 @@
   .profile-icon88 .fa-twitter:hover {
     color: #00acee;
     transform: translateY(-3px);
+  }
+
+  .head{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+
   }

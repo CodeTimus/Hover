@@ -27,20 +27,17 @@ const ProfileCard = () => {
 
   const displayDoctor = () => {
     return doctor.map((doc) => (
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="box88">
             <div className="profile-box88">
               <div className="profile-img88">
                 <img src={"http://localhost:3000/" + doc.image} />
               </div>
               <div className="profile-docs88">
-                <h1>{doc.name}</h1>
+              <Link to={'/main/DocProfile/' + doc._id} ><h1>{doc.name}</h1></Link>
                 <h3>{doc.speciality}</h3>
-                <p>
-                  A front-end developer is a software developer. Who works on
-                  the client-side, of a web application.
-                </p>
-                <Link to={'/main/DocProfile/' + doc._id} className="btn btn-outline-primary m-2">Know More</Link>
+                
+                {/* <Link to={'/main/DocProfile/' + doc._id} className="btn btn-outline-primary m-2">Know More</Link> */}
               </div>
             </div>
           </div>
@@ -53,6 +50,7 @@ const ProfileCard = () => {
 
   return (
     <div className="">
+      <p className="head">Our Qualified Doctors</p>
       <div className='row mt-5  d-flex justify-content-center'> {displayDoctor()} </div>
     </div>
   );

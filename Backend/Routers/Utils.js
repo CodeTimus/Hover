@@ -42,6 +42,12 @@ const uploader = multer({ storage: storage });
 router.post('/uploadfile', uploader.single('myfile'), (req, res) => {
     res.status(200).json({ message: 'file uploaded Successfully'})
 });
+router.post('/certificateFile',uploader.single('myfile'),(req,res)=>{
+    res.json({message:'file uploaded successfully'})
+});
+router.post('/certificateFile2',uploader.single('myfile'),(req,res)=>{
+    res.json({message:'file uploaded successfully'})
+});
 const mailConfig = {
     service : 'gmail',
     auth: {
