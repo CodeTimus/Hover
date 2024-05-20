@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .kv1{
   color: rgb(26, 24, 24);
   
@@ -16,8 +16,8 @@
   padding: auto;
   margin: 15px;
 } */
-=======
-.src{
+
+.src1{
   background-image: url(https://cdn.wallpapersafari.com/2/62/tmkjJL.jpg);
   height: 96vh;
   background-size: cover;
@@ -26,7 +26,7 @@
 
   
 }
-.container{
+.container2{
   position: absolute;
   margin-top: 150px;
   display: flex;
@@ -34,4 +34,3 @@
   flex-direction: column;
   align-items: center;
 }
->>>>>>> 236b8091a9d0b05086ae61606292a74868db75b3
