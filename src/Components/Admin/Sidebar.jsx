@@ -10,11 +10,7 @@ const Sidebar = ({ children }) => {
 
       <>
         <div className="sidebar">
-          <div className="logo-details">
-            <i className="bx bxl-c-plus-plus icon" />
-            <div className="logo_name">Mitti Mahal</div>
-            <i className=" bx bx-menu" id="btn" />
-          </div>
+          
           <ul className="nav-list">
             <li>
               <Link to="/Admin/AdminDashboard">
@@ -42,7 +38,7 @@ const Sidebar = ({ children }) => {
               <i class="fa-solid fa-user-doctor"></i>
                 <span className="links_name">Manage Doctor</span>
               </Link>
-              <span className="tooltip">Manage Product</span>
+              <span className="tooltip">Manage Doctor</span>
             </li>
             <li className="profile">
               <Link to="/main/Home">

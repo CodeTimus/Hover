@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link className="nav-link active" aria-current="page" onClick={logout}>
           Logout
         </Link>
+        
       );
     } else {
       return (

@@ -38,11 +38,11 @@ const ManageUser = () => {
         ))
     }
     return (
-        <div className='d-flex mt-5 flex-column align-items-center'>
-            <h1 className="bg-danger text-white py-5 w-75 text-center">Manage User</h1>
+        <div className='d-flex mt-5 flex-column align-items-center ' style={{marginLeft:"-100px"}}>
+            <h1 className="bg-danger text-white py-5 w-100 text-center">Manage User</h1>
 
 
-            <table className="table table-striped table-bordered table-dark w-75">
+            <table className="table table-striped table-bordered table-dark w-100">
                 <thead>
                     <tr>
                         <th className="text-center" style={{fontSize: '20px'}}>Name</th>
