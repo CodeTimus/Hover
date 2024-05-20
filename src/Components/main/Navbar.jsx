@@ -84,7 +84,7 @@ const Navbar = () => {
     </div>
     <strong>Call Now</strong>
     <br />
-    <span>+ (88017) - 123 - 4567</span>
+    <span>+91 88829 78888</span>
   </li>
 </>
 

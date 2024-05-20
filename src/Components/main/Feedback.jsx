@@ -2,7 +2,7 @@ import React from 'react'
 import './Feedback.css'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import docneww from '../../assets/docneww.png'
+import docneww from '../../assets/docneww.jpg'
 
 const Feedback = () => {
     const FeedbackForm = useFormik({

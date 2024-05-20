@@ -9,7 +9,11 @@ import gallery2 from'../../assets/gallery2.jpg'
 import gallery1 from'../../assets/gallery1.jpg'
 import gallery5 from'../../assets/gallery5.jpg'
 import gallery6 from'../../assets/gallery6.jpg'
-
+import bubble from'../../assets/bubble.png'
+import bedd from'../../assets/bedd.png'
+import mins from'../../assets/mins.png'
+import ambul from'../../assets/ambul.png'
+import hrs from'../../assets/hrs.png'
 const Readmore1 = () => {
   return (
     <div>
@@ -24,19 +28,13 @@ const Readmore1 = () => {
  
   <section className="section__container about__container">
     <div className="about__content">
-      <h2 className="section__header">About Us</h2>
+      <h2 className="section__header">About Us <img src={bubble} alt="" /></h2>
       <p>
-        Welcome to our healthcare website, your one-stop destination for
-        reliable and comprehensive health care information. We are committed to
-        promoting wellness and providing valuable resources to empower you on
-        your health journey.
+      India's first, GPS based technology platform for fast and reliable first point medical attention. With an increasing emphasis on promoting independent living today, having access to the nearest ambulance to you can provide much needed peace of mind in a worst case scenario.
       </p>
+      <h2 className="section__header">History/Idea <img src={bubble} alt="" /></h2>
       <p>
-        Explore our extensive collection of expertly written articles and guides
-        covering a wide range of health topics. From understanding common
-        medical conditions to tips for maintaining a healthy lifestyle, our
-        content is designed to educate, inspire, and support you in making
-        informed choices for your health.
+      Emergency response is the most critical to the lifeline of any country. Medulance wants to inspire breakthroughs in the way India looks at ambulances and first-point medical attention and to touch lives. Medulance was started in the year 2017 to make finding an ambulance as easy as finding food or taxis these days to assist lives. Medulance is an integrated emergency response support provider, ambulance booking and tracking system designed to provide first-point medical attention.
       </p>
       <p>
         Discover practical health tips and lifestyle advice to optimize your
@@ -63,19 +61,17 @@ const Readmore1 = () => {
       <div className="main-choseus">
         <div className="main-inner-chose">
           <div className="chose-img">
-            <img src={virus} alt="" />
+            <img src={bedd} alt="" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              impedit voluptates quod?{" "}
+            Patient first policy.{" "}
             </p>
           </div>
         </div>
         <div className="main-inner-chose">
           <div className="chose-img">
-            <img src={virus} alt="" />
+            <img src={mins} alt="" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              impedit voluptates quod?{" "}
+            Emergency assistance time of 15 minutes or less.{" "}
             </p>
           </div>
         </div>
@@ -86,19 +82,17 @@ const Readmore1 = () => {
       <div className="main-choseus">
         <div className="main-inner-chose">
           <div className="chose-img">
-            <img src={virus} alt="" />
+            <img src={ambul} alt="" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              impedit voluptates quod?{" "}
+            Biggest fleet of ambulances across Lucknow{" "}
             </p>
           </div>
         </div>
         <div className="main-inner-chose">
           <div className="chose-img">
-            <img src={virus} alt="" />
+            <img src={hrs} alt="" />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              impedit voluptates quod?{" "}
+            24/7 Support{" "}
             </p>
           </div>
         </div>

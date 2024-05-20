@@ -521,8 +521,7 @@ const Home = () => {
                   <h6>NewsLetter</h6>
                   <div className="footer-newslatter">
                     <p>
-                      Be the first to know about new arrivals, look books, sales &amp;
-                      promos!
+                      Be the first to know about our services!
                     </p>
                     <form action="#">
                       <input type="text" placeholder="Your Email" />
