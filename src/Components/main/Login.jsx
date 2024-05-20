@@ -1,45 +1,45 @@
 import React, { useState } from 'react';
-import {useNavigate, Link} from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 // import './LoginPAge.css'
-import {useFormik} from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import useUserContext from '../../UserContext';
 
-const SignupSchema = Yup.object().shape({
-  fname: Yup.string()
-  .min(2, 'Too Short!')
-  .max(10, 'Too Long!')
-  .required('Required'),
-lname: Yup.string()
-  .min(2, 'Too Short!')
-  .max(10, 'Too Long!')
-  .required('Required'),
+// const SignupSchema = Yup.object().shape({
+//   fname: Yup.string()
+//   .min(2, 'Too Short!')
+//   .max(10, 'Too Long!')
+//   .required('Required'),
+// lname: Yup.string()
+//   .min(2, 'Too Short!')
+//   .max(10, 'Too Long!')
+//   .required('Required'),
 
-email: Yup.string().email('Invalid email').required('Required'),
-password: Yup
-  .string()
-  .required('Please Enter your password')
-  .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-  )
-})
+// email: Yup.string().email('Invalid email').required('Required'),
+// password: Yup
+//   .string()
+//   .required('Please Enter your password')
+//   .matches(
+//       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+//       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+//   )
+// })
 
-const LoginSchema = Yup.object().shape({
+// const LoginSchema = Yup.object().shape({
 
-email: Yup.string().email('Invalid email').required('Required'),
-password: Yup
-  .string()
-  .required('Please Enter your password')
-  .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-  )
-})
+// email: Yup.string().email('Invalid email').required('Required'),
+// password: Yup
+//   .string()
+//   .required('Please Enter your password')
+//   .matches(
+//       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+//       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+//   )
+// })
 
 function Login() {
 
@@ -47,64 +47,70 @@ function Login() {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const SignupForm = useFormik({
-    initialValues:{
-      name:'',
-      email:'',
-      password:'',
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
     },
 
-    onSubmit : async(values , action) => {
+    onSubmit: async (values, action) => {
       console.log(values);
-      const res = await fetch ("http://localhost:3000/user/add",{
-        method:'POST',
+      const res = await fetch("http://localhost:3000/user/add", {
+        method: 'POST',
         body: JSON.stringify(values),
-        headers:{
-            'Content-Type':'application/json'
+        headers: {
+          'Content-Type': 'application/json'
         }
       });
       console.log(res.status)
       action.resetForm()
       // navigate('/')
 
-      if (res.status === 200){
-        enqueueSnackbar('Signup Successfull', {variant: 'success'})
+      if (res.status === 200) {
+        enqueueSnackbar('Signup Successfull', { variant: 'success' })
       } else {
-        enqueueSnackbar('Something went wrong', {variant: 'error'})
+        enqueueSnackbar('Something went wrong', { variant: 'error' })
       }
-    } ,
-    validationSchema: SignupSchema,
+    },
+    // validationSchema: SignupSchema,
   });
 
   const LoginForm = useFormik({
-    initialValues:{
-      email:'',
-      password:'',
+    initialValues: {
+      email: '',
+      password: '',
     },
 
-    onSubmit : async(values , action) => {
+    onSubmit: async (values, action) => {
       console.log(values);
-      const res = await fetch ("http://localhost:3000/user/authenticate",{
-        method:'POST',
+      const res = await fetch("http://localhost:3000/user/authenticate", {
+        method: 'POST',
         body: JSON.stringify(values),
-        headers:{
-            'Content-Type':'application/json'
+        headers: {
+          'Content-Type': 'application/json'
         }
       });
       console.log(res.status)
       action.resetForm()
 
-      if (res.status === 200){
-        enqueueSnackbar('Login Successfully', {variant: 'success'})
+      if (res.status === 200) {
+        enqueueSnackbar('Login Successfully', { variant: 'success' })
         setLoggedIn(true)
-        navigate('/')
-      } else {
-        enqueueSnackbar('Something went wrong', {variant: 'error'})
+        const data = await res.json();
+        sessionStorage.setItem('isloggedin', true);
+        if (data.role === 'admin') {
+          sessionStorage.setItem('admin', JSON.stringify(data));
+          navigate('/Admin/AdminDashboard');
+        } else {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          navigate('/');
+        }
+      } else if (res.status === 400) {
+        enqueueSnackbar('Invalid email or password', { variant: 'error' })
       }
-      const data = await res.json()
-      console.log(data)
-      sessionStorage.setItem('user',JSON.stringify(data))
-    } ,
-    validationSchema: LoginSchema,
+
+    },
+    // validationSchema: LoginSchema,
   })
 
   const handleSignUpClick = () => {
@@ -115,9 +121,9 @@ function Login() {
     setIsSignUpMode(false);
   };
 
-  const {setLoggedIn} = useUserContext();
+  const { setLoggedIn } = useUserContext();
 
-  
+
 
   return (
     <div className={`loginContainer ${isSignUpMode ? 'sign-up-mode' : ''}`}>
@@ -127,64 +133,64 @@ function Login() {
             <h2 className="title">Sign up</h2>
 
             <div className="input-field">
-              <FontAwesomeIcon icon={faUser} className='my-auto mx-auto'/>
+              <FontAwesomeIcon icon={faUser} className='my-auto mx-auto' />
               <input className='LoginInput' type="text" placeholder="Username" id='name'
-              onChange={SignupForm.handleChange}
-              value={SignupForm.values.name} />
+                onChange={SignupForm.handleChange}
+                value={SignupForm.values.name} />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto'/>
+              <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto' />
               <input className='LoginInput' type="email" placeholder="Email" id='email'
-              onChange={SignupForm.handleChange}
-              value={SignupForm.values.email} />
+                onChange={SignupForm.handleChange}
+                value={SignupForm.values.email} />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faLock} className='my-auto mx-auto'/>
+              <FontAwesomeIcon icon={faLock} className='my-auto mx-auto' />
               <input className='LoginInput' type="password" placeholder="Password" id='password'
-              onChange={SignupForm.handleChange}
-              value={SignupForm.values.password} />
+                onChange={SignupForm.handleChange}
+                value={SignupForm.values.password} />
             </div>
             <button className='log-btn fs-4'>Sign up</button>
-           
+
             <p className="social-text loginp"> Sign in with social platforms</p>
             <div className="social-media">
-              
+
               <a href="#" className="social-icon">
-                <FontAwesomeIcon icon={faGoogle} className='my-auto mx-auto'/>
+                <FontAwesomeIcon icon={faGoogle} className='my-auto mx-auto' />
               </a>
               <a href="#" className="social-icon">
-                <FontAwesomeIcon icon={faLinkedinIn} className='my-auto mx-auto'/>
+                <FontAwesomeIcon icon={faLinkedinIn} className='my-auto mx-auto' />
               </a>
             </div>
           </form>
           <form action="#" className="sign-up-form loginForm" onSubmit={LoginForm.handleSubmit}>
             <h2 className="title">Sign In</h2>
             <div className="input-field">
-              <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto'/>
+              <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto' />
               <input className='LoginInput' type="email" placeholder="Email" name='email'
-              onChange={LoginForm.handleChange}
-              value={LoginForm.values.email} />
+                onChange={LoginForm.handleChange}
+                value={LoginForm.values.email} />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faLock} className='my-auto mx-auto'/>
+              <FontAwesomeIcon icon={faLock} className='my-auto mx-auto' />
               <input className='LoginInput' type="password" placeholder="Password" name='password'
-              onChange={LoginForm.handleChange}
-              value={LoginForm.values.password} />
+                onChange={LoginForm.handleChange}
+                value={LoginForm.values.password} />
             </div>
             <div>
               <Link to="/main/ForgetPassword" className="text-body" >
-              Forgot Password
+                Forgot Password
               </Link>
             </div>
             <button className='log-btn fs-4'>Sign In</button>
             <p className="social-text loginp">Or Sign up with social platforms</p>
             <div className="social-media">
-             
+
               <a href="#" className="social-icon">
-                <FontAwesomeIcon icon={faGoogle} className='my-auto mx-auto'/>
+                <FontAwesomeIcon icon={faGoogle} className='my-auto mx-auto' />
               </a>
               <a href="#" className="social-icon">
-                <FontAwesomeIcon icon={faLinkedinIn} className='my-auto mx-auto'/>
+                <FontAwesomeIcon icon={faLinkedinIn} className='my-auto mx-auto' />
               </a>
             </div>
           </form>
@@ -198,9 +204,9 @@ function Login() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
             </p>
-            <button  className="log-btn transparent" onClick={handleSignUpClick}>
+            <button className="log-btn transparent" onClick={handleSignUpClick}>
               Sign In
-              </button>
+            </button>
           </div>
           <img src="image01.png" class="image" alt="" />
         </div>
@@ -219,8 +225,9 @@ function Login() {
         </div>
       </div>
     </div>
-  )}
+  )
+}
 
-  export default Login
+export default Login
 
 
