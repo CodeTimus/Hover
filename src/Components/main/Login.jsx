@@ -8,6 +8,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import useUserContext from '../../UserContext';
+import image02 from '../../assets/image02.png'
+import image01 from '../../assets/image01.png'
 
 // const SignupSchema = Yup.object().shape({
 //   fname: Yup.string()
@@ -199,29 +201,29 @@ function Login() {
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
-            <h3 className='loginh3'>New here?</h3>
+            <h3 className='loginh3'>Already have an account?</h3>
+            
             <p className='loginp'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+             
             </p>
             <button className="log-btn transparent" onClick={handleSignUpClick}>
               Sign In
             </button>
           </div>
-          <img src="image01.png" class="image" alt="" />
+          <img src={image01} class="image" alt="" />
         </div>
         <div className="panel right-panel">
           <div className="content">
-            <h3 className='loginh3'>One of us ?</h3>
+            <h3 className='loginh3'>Create An Account!</h3>
             <p className='loginp'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+            Join us now to access unlimited features and
+seamless user experience.
             </p>
             <button onClick={handleSignInClick} className="log-btn transparent" id="sign-in-btn">
-              Sign in
+              Sign Up
             </button>
           </div>
-          <img src="image02.png" class="image" alt="" />
+          <img src={image02} class="image" alt="" />
         </div>
       </div>
     </div>
