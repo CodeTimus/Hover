@@ -103,6 +103,8 @@ const DocProfile = () => {
                             <button onClick={() => selectDoctor(doctorList)}>
                               Send Notification
                             </button>
+                            
+                          
 
                           </div>
                         </div>

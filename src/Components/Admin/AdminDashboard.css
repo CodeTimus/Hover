@@ -1,13 +1,17 @@
-.kv1{
-  color: brown;
+.src{
+  background-image: url(https://cdn.wallpapersafari.com/2/62/tmkjJL.jpg);
+  height: 96vh;
+  background-size: cover;
+  /* width:1500px; */
+  margin-left: -100px;
+
   
 }
-.kv1 h1{
-  font-size: 70px;
-}
-.kv2 img{
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 120px;
-  height: 400px;
+.container{
+  position: absolute;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

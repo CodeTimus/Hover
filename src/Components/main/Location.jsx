@@ -66,7 +66,7 @@ const Location = () => {
                 coords.length > 0 && (
                     <MapContainer
                         onClick={e => console.log(e)}
-                        style={{ width: 1200, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
+                        style={{ width: 1400, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

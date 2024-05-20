@@ -13,6 +13,18 @@ router.post('/add',(req,res)=>{
         
     });
 })
+
+router.delete("/delete/:id", (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+      .then((result) => {
+        console.log("User Data Deleted");
+        res.status(200).json({ status: "success", result });
+      })
+      .catch((err) => {
+        console.error("Error deleting user data", err);
+        res.status(500).send("Error deleting user data");
+      });
+  });
 router.get("/getbyemail/:email",(req,res) => {
     console.log(req.params.email)
     Model.find({email: req.params.email})
