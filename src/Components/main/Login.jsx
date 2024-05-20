@@ -9,6 +9,37 @@ import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import useUserContext from '../../UserContext';
 
+const SignupSchema = Yup.object().shape({
+  fname: Yup.string()
+  .min(2, 'Too Short!')
+  .max(10, 'Too Long!')
+  .required('Required'),
+lname: Yup.string()
+  .min(2, 'Too Short!')
+  .max(10, 'Too Long!')
+  .required('Required'),
+
+email: Yup.string().email('Invalid email').required('Required'),
+password: Yup
+  .string()
+  .required('Please Enter your password')
+  .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+  )
+})
+
+const LoginSchema = Yup.object().shape({
+
+email: Yup.string().email('Invalid email').required('Required'),
+password: Yup
+  .string()
+  .required('Please Enter your password')
+  .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+  )
+})
 
 function Login() {
 
@@ -40,7 +71,8 @@ function Login() {
       } else {
         enqueueSnackbar('Something went wrong', {variant: 'error'})
       }
-    } 
+    } ,
+    validationSchema: SignupSchema,
   });
 
   const LoginForm = useFormik({
@@ -71,7 +103,8 @@ function Login() {
       const data = await res.json()
       console.log(data)
       sessionStorage.setItem('user',JSON.stringify(data))
-    } 
+    } ,
+    validationSchema: LoginSchema,
   })
 
   const handleSignUpClick = () => {
@@ -165,7 +198,7 @@ function Login() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
             </p>
-            <button className="log-btn transparent" onClick={handleSignUpClick}>
+            <button  className="log-btn transparent" onClick={handleSignUpClick}>
               Sign In
               </button>
           </div>
