@@ -64,9 +64,7 @@ const Contact = () => {
         <div />
       </div>
       <p className="textcontact">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste
-        facilis quos impedit fuga nobis modi debitis laboriosam velit reiciendis
-        quisquam alias corporis, maxime enim, optio ab dolorum sequi qui.
+       
       </p>
     </div>
     <div className="contact-body">
@@ -76,14 +74,14 @@ const Contact = () => {
             <i className="fas fa-mobile-alt" />
           </span>
           <span>Phone No.</span>
-          <span className="textcontact">1-2392-23928-2</span>
+          <span className="textcontact">+91 88829 78888</span>
         </div>
         <div>
           <span>
             <i className="fas fa-envelope-open" />
           </span>
           <span>E-mail</span>
-          <span className="textcontact">mail@company.com</span>
+          <span className="textcontact">EMS@medic.com</span>
         </div>
         <div>
           <span>
@@ -91,7 +89,7 @@ const Contact = () => {
           </span>
           <span>Address</span>
           <span className="textcontact">
-            2939 Patrick Street, Vicotria TX, United States
+            Jankipuram Sector-F Lucknow India
           </span>
         </div>
         <div>
@@ -99,7 +97,8 @@ const Contact = () => {
             <i className="fas fa-clock" />
           </span>
           <span>Opening Hours</span>
-          <span className="textcontact">Monday - Friday (9:00 AM to 5:00 PM)</span>
+          <span className="textcontact">24/7 Support
+</span>
         </div>
       </div>
       <div className="contact-form">

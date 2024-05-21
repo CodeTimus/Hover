@@ -62,8 +62,8 @@ const Home = () => {
                 <br /> Patients Healths
               </h2>
               <p className="lorem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus <br />
-                numquam veniam porro eius, fugiat vero ut ipsum libero
+              Help / Rescues the Patient in case of the Emergency situation by doing just a click.<br />
+              Ambulance comes right in front of the door for help.
               </p>
               <div className="home-btn">
                 <Link to="/main/Location">Explore Map</Link>
@@ -93,7 +93,7 @@ const Home = () => {
             <div className="inner-technology">
               <span />
               <i className="fi fi-tr-hands-heart" />
-              <h2>Great Doctors</h2>
+              <h2>Biggest fleet of ambulances across Lucknow</h2>
               <p>
                 Our diverse team of 120+ doctors, including physicians and clinicians,
                 share a common passion to provide the highest quality of world-class
@@ -103,11 +103,10 @@ const Home = () => {
             <div className="inner-technology">
               <span />
               <i className="fi fi-rr-doctor" />
-              <h2>Multi-Specialty Care</h2>
+              <h2>Emergency assistance time of 5 minutes or less
+</h2>
               <p>
-                An ISO 9001-2000 certified, NABH Accredited multi-specialty hospital
-                offering a patient-centric care to people of all age group, backed by
-                the NABL Accredited Laboratories.
+              In the race against time, every second counts. Our commitment to providing emergency assistance within 5 minutes or less is not just a target; it's our promise to you in your moment of need
               </p>
             </div>
             <div className="inner-technology">
@@ -115,9 +114,7 @@ const Home = () => {
               <i className="fi fi-tr-user-md" />
               <h2>24/7 Support</h2>
               <p>
-                Fully equipped to offer medical assistance for all kinds of
-                emergencies including pediatrics (facilities for Children). Backed by
-                Ambulance with ventilator support.
+              Our 24/7 support ensures that assistance is always within reach, no matter the time of day or night. Here's how our round-the-clock commitment to support empowers you to face any challenge with confidence.
               </p>
             </div>
           </div>
@@ -451,6 +448,19 @@ const Home = () => {
           </section>
         </div>
         {/* customer review */}
+        {/* */}
+        <div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Write a Review</h5>
+    <p class="card-text">Your review will help us improve and make it user friendly for more users.</p>
+    < a href="/main/Feedback" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here!</a>
+    
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
         {/* footer */}
         <footer className="footer">
           <div className="container">
@@ -462,10 +472,7 @@ const Home = () => {
                       <img src={footerlogo} alt="" />
                     </a>
                   </div>
-                  <p>
-                    The Customer is at the heart of our unique bussiness model, which
-                    include design.
-                  </p>
+                  
                   <a href="#">
                     <img src="img/payment.png" alt="" />
                   </a>
@@ -495,7 +502,7 @@ const Home = () => {
                   <h6>Links</h6>
                   <ul>
                     <li>
-                      <a href="#">Contact Us</a>
+                      <a href="/main/Contact">Contact Us</a>
                     </li>
                     <li>
                       <a href="#">Find a Doctor</a>
@@ -514,8 +521,7 @@ const Home = () => {
                   <h6>NewsLetter</h6>
                   <div className="footer-newslatter">
                     <p>
-                      Be the first to know about new arrivals, look books, sales &amp;
-                      promos!
+                      Be the first to know about our services!
                     </p>
                     <form action="#">
                       <input type="text" placeholder="Your Email" />
