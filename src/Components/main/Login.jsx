@@ -11,37 +11,31 @@ import useUserContext from '../../UserContext';
 import image02 from '../../assets/image02.png'
 import image01 from '../../assets/image01.png'
 
-// const SignupSchema = Yup.object().shape({
-//   fname: Yup.string()
-//   .min(2, 'Too Short!')
-//   .max(10, 'Too Long!')
-//   .required('Required'),
-// lname: Yup.string()
-//   .min(2, 'Too Short!')
-//   .max(10, 'Too Long!')
-//   .required('Required'),
+const SignupSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup
+    .string()
+    .required('Please Enter your password')
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    )
+})
 
-// email: Yup.string().email('Invalid email').required('Required'),
-// password: Yup
-//   .string()
-//   .required('Please Enter your password')
-//   .matches(
-//       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-//       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-//   )
-// })
+const LoginSchema = Yup.object().shape({
 
-// const LoginSchema = Yup.object().shape({
-
-// email: Yup.string().email('Invalid email').required('Required'),
-// password: Yup
-//   .string()
-//   .required('Please Enter your password')
-//   .matches(
-//       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-//       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-//   )
-// })
+email: Yup.string().email('Invalid email').required('Required'),
+password: Yup
+  .string()
+  .required('Please Enter your password')
+  .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+  )
+})
 
 function Login() {
 
@@ -74,7 +68,7 @@ function Login() {
         enqueueSnackbar('Something went wrong', { variant: 'error' })
       }
     },
-    // validationSchema: SignupSchema,
+    validationSchema: SignupSchema,
   });
 
   const LoginForm = useFormik({
@@ -112,7 +106,7 @@ function Login() {
       }
 
     },
-    // validationSchema: LoginSchema,
+    validationSchema: LoginSchema,
   })
 
   const handleSignUpClick = () => {
@@ -140,19 +134,28 @@ function Login() {
                 onChange={SignupForm.handleChange}
                 value={SignupForm.values.name} />
             </div>
+                {
+                  SignupForm.errors.name
+                }
             <div className="input-field">
               <FontAwesomeIcon icon={faEnvelope} className='my-auto mx-auto' />
               <input className='LoginInput' type="email" placeholder="Email" id='email'
                 onChange={SignupForm.handleChange}
                 value={SignupForm.values.email} />
             </div>
+                {
+                  SignupForm.errors.email
+                }
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className='my-auto mx-auto' />
               <input className='LoginInput' type="password" placeholder="Password" id='password'
                 onChange={SignupForm.handleChange}
                 value={SignupForm.values.password} />
             </div>
-            <button className='log-btn fs-4'>Sign up</button>
+                {
+                  SignupForm.errors.password
+                }
+            <button type='submit' className='log-btn fs-4'>Sign up</button>
 
             <p className="social-text loginp"> Sign in with social platforms</p>
             <div className="social-media">
@@ -173,12 +176,18 @@ function Login() {
                 onChange={LoginForm.handleChange}
                 value={LoginForm.values.email} />
             </div>
+            {
+                  LoginForm.errors.email
+                }
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className='my-auto mx-auto' />
               <input className='LoginInput' type="password" placeholder="Password" name='password'
                 onChange={LoginForm.handleChange}
                 value={LoginForm.values.password} />
             </div>
+            {
+                  LoginForm.errors.password
+                }
             <div>
               <Link to="/main/ForgetPassword" className="text-body" >
                 Forgot Password

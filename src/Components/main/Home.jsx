@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowDisclaimer(true);
-      enqueueSnackbar('This website is for informational purposes only. The content should not be considered professional advice.', {
+      enqueueSnackbar(`Please note that the selection of doctors is at the user's discretion. We are not responsible for any issues that arise from the chosen medical services.`, {
         variant: 'info',
         anchorOrigin: {
           vertical: 'bottom',
