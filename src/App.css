@@ -191,7 +191,7 @@ html {
 }
 
 .home .home-right-content {
-    /* flex: 1 1 50rem; */
+    flex: 1 1 50rem;
     height: 500px;
     width: 700px;
     position: absolute;
@@ -1550,6 +1550,8 @@ a:focus{
 /* Footer----------------------------------------------------------------------- */
 
 .footer{
+   /* height: 400px; */
+   /* width: 20px; */
     background: #111111;
     padding-top: 70px;
 }

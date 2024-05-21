@@ -34,7 +34,7 @@ const Readmore1 = () => {
       </p>
       <h2 className="section__header">History/Idea <img src={bubble} alt="" /></h2>
       <p>
-      Emergency response is the most critical to the lifeline of any country. Medulance wants to inspire breakthroughs in the way India looks at ambulances and first-point medical attention and to touch lives. Medulance was started in the year 2017 to make finding an ambulance as easy as finding food or taxis these days to assist lives. Medulance is an integrated emergency response support provider, ambulance booking and tracking system designed to provide first-point medical attention.
+      Emergency response is the most critical to the lifeline of any country. Medulance wants to inspire breakthroughs in the way India looks at ambulances and first-point medical attention and to touch lives. EMS was started in the year 2024 to make finding an ambulance as easy as finding food or taxis these days to assist lives. EMS is an integrated emergency response support provider, ambulance booking and tracking system designed to provide first-point medical attention.
       </p>
       <p>
         Discover practical health tips and lifestyle advice to optimize your

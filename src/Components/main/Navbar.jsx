@@ -70,11 +70,8 @@ const Navbar = () => {
       </div>
     </div>
     <>
-  <div className="icon-box">
-    <i className="far fa-envelope" />
-  </div>
-  <strong >Email</strong>
-  <br />
+ 
+  
   <a href="mailto:info@medic.com">
     <span style={{ whiteSpace: 'pre-wrap' }}>EMS@medic.com </span>
   </a>

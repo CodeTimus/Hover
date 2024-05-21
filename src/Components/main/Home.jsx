@@ -538,11 +538,7 @@ const Home = () => {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <div className="footer-copyright-text">
-                  <p>
-                    Copyright © 2024 All rights reserved | This template is made with{" "}
-                    <i className="fa fa-heart-o" arial-hidden="true" />
-                    by <a href="#">CodingWithkumar</a>
-                  </p>
+                  
                 </div>
               </div>
             </div>

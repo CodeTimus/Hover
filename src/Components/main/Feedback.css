@@ -111,7 +111,7 @@ iframe {
   background: -moz-linear-gradient(left, #0072ff, #00c6ff);
   background: linear-gradient(left, #0072ff, #00c6ff); */
 
-  background-image: linear-gradient();
+  /* background: linear-gradient(rgba(248, 248, 248, 0.9), hsla(166, 54%, 61%, 0.85)); */
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,7 +125,7 @@ iframe {
 
 .container-contact1 {
   width: 1163px;
-  background: #94e2a6;
+  background:  linear-gradient(rgba(248, 248, 248, 0.9), hsla(166, 54%, 61%, 0.85));
   opacity: 0.9;
   border-radius: 10px;
   overflow: hidden;
