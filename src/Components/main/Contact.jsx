@@ -1,7 +1,5 @@
 import React from 'react'
 import {useFormik} from 'formik'
-// import "./areeba.css"
-// import './Contact.css'
 // import {enqueueSnackbar} from 'notistack'
 // import * as yup from 'yup'
 import contactpng from '../../assets/contactpng.png'
@@ -27,12 +25,6 @@ const Contact = () => {
       });
       console.log(res.status)
       action.resetForm()
-
-      // if (res.status === 200){
-      //   enqueueSnackbar('Thankyou For Contacting Us', {variant: 'success'})
-      // } else {
-      //   enqueueSnackbar('Something went wrong', {variant: 'error'})
-      // }
     } 
 
 

@@ -36,7 +36,7 @@ const DocProfile = () => {
   const sendNotification = async (notiToken) => {
     const res = await fetch('http://localhost:3000/util/sendNotification', {
       method: 'POST',
-      body: JSON.stringify({ notiToken, data: { title: 'Hello', body: 'This is a test notification' } }),
+      body: JSON.stringify({ notiToken, data: { title: 'Hey ⚠️', body: "It's an Emergency Alert" } }),
       headers: {
         'Content-Type': 'application/json'
       }
